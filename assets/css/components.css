@@ -1,0 +1,344 @@
+/* components.css — Header, footer, botões, cards, formulário, WhatsApp. */
+
+/* ─── Buttons ─── */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 0;
+  border-radius: var(--radius-pill);
+  background: var(--accent);
+  color: var(--accent-fg);
+  font: 500 var(--text-base)/1 var(--font-sans);
+  padding: 0.85rem 1.2rem;
+  cursor: pointer;
+  transition: transform var(--transition), box-shadow var(--transition), filter var(--transition);
+  box-shadow: var(--shadow-btn-yellow);
+}
+
+.btn-primary svg {
+  width: 18px;
+  height: 18px;
+  transition: transform var(--transition);
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.03);
+}
+
+.btn-primary:hover svg { transform: translateX(4px); }
+
+.btn-primary:focus-visible {
+  outline: 2px solid var(--text-head);
+  outline-offset: 2px;
+}
+
+.btn-dark {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 0;
+  border-radius: var(--radius-pill);
+  background: var(--color-charcoal);
+  color: var(--color-white);
+  font: 500 var(--text-base)/1 var(--font-sans);
+  padding: 0.85rem 1.2rem;
+  cursor: pointer;
+  transition: transform var(--transition), box-shadow var(--transition), filter var(--transition);
+  box-shadow: var(--shadow-btn-dark);
+}
+
+.btn-dark svg {
+  width: 18px;
+  height: 18px;
+  color: var(--accent);
+  transition: transform var(--transition);
+}
+
+.btn-dark:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.1);
+}
+
+.btn-dark:hover svg { transform: translateX(4px); }
+
+.btn-dark:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* ─── Card ─── */
+.card {
+  background: var(--bg-surface);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+}
+
+/* ─── Header ─── */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  transition: box-shadow var(--transition);
+}
+
+.site-header.is-scrolled {
+  box-shadow: var(--shadow-header);
+}
+
+.pre-header {
+  background: var(--color-off-white);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.pre-header-inner {
+  min-height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+}
+
+.pre-header-inner p {
+  margin: 0;
+  color: var(--color-charcoal);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.social-links {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.social-links a {
+  color: var(--color-charcoal);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.main-header {
+  background: var(--accent);
+  border-bottom: none;
+}
+
+/* Páginas internas */
+.site-header > .header-inner {
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--color-border-header);
+}
+
+.site-header > .header-inner .logo,
+.site-header > .header-inner .nav-list a {
+  color: var(--lead);
+  font-weight: 700;
+}
+
+.site-header > .header-inner .menu-toggle span {
+  background: var(--lead);
+}
+
+.header-inner {
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.05em;
+  text-decoration: none;
+  line-height: 1;
+}
+
+.logo-mark {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 1.45rem;
+  color: var(--color-white);
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.logo-text {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--lead);
+  letter-spacing: 0.01em;
+  line-height: 1;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 1.25rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list a {
+  font-weight: 700;
+  color: var(--color-charcoal);
+}
+
+.nav-list a:hover { color: var(--color-black); }
+
+.menu-toggle {
+  display: none;
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border-toggle);
+  background: var(--color-white);
+  padding: 9px 8px;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  height: 2px;
+  background: var(--color-charcoal);
+  margin: 5px 0;
+}
+
+/* ─── Footer ─── */
+.site-footer {
+  background: var(--color-charcoal);
+  color: var(--color-white);
+  padding: 2.5rem 0;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.site-footer p,
+.site-footer address p { color: var(--color-footer-text); }
+
+.back-top {
+  color: var(--accent);
+  font-weight: 500;
+}
+
+/* ─── WhatsApp float ─── */
+.whatsapp-float {
+  position: fixed;
+  right: 1.15rem;
+  bottom: 1.15rem;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--color-whatsapp);
+  color: var(--color-white);
+  box-shadow: var(--shadow-whatsapp);
+  z-index: 45;
+  transition: transform var(--transition), box-shadow var(--transition), filter var(--transition);
+}
+
+.whatsapp-float svg { width: 29px; height: 29px; }
+
+.whatsapp-float:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-whatsapp-hover);
+  filter: brightness(1.05);
+}
+
+/* ─── Form layout ─── */
+.form-group {
+  margin-top: 0.85rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: var(--space-xs);
+  font-weight: 500;
+  color: var(--color-charcoal);
+}
+
+.form-panel {
+  padding: var(--space-md);
+}
+
+/* ─── Formulário ─── */
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--color-border-input);
+  border-radius: var(--radius-md);
+  background: var(--bg-surface);
+  color: var(--color-charcoal);
+  font: 400 var(--text-base)/1.4 var(--font-sans);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid var(--focus-outline);
+  outline-offset: 1px;
+  border-color: var(--accent);
+  box-shadow: var(--focus-ring);
+}
+
+/* ─── Responsivo: nav mobile ─── */
+@media (max-width: 900px) {
+  .menu-toggle { display: block; }
+
+  .nav {
+    position: absolute;
+    top: 72px;
+    left: 0;
+    right: 0;
+    background: var(--bg-surface);
+    border-bottom: 1px solid var(--color-border-nav);
+    padding: 1rem;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav.is-open { display: flex; }
+
+  .nav-list {
+    width: 100%;
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+
+  .nav-cta { margin-top: var(--space-sm); }
+}
+
+@media (max-width: 768px) {
+  .nav.is-open { align-items: stretch; }
+
+  .nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem 1rem;
+  }
+
+  .nav-list li { flex: 0 1 auto; }
+
+  .nav-cta { align-self: center; }
+}

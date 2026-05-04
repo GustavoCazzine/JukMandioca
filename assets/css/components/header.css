@@ -1,0 +1,19 @@
+/* header.css — Curva wave: main-header → hero. */
+
+/*
+  Estratégia: padding-bottom estende o .main-header abaixo do seu
+  conteúdo; clip-path: url(#clip-juk-wave) carve a onda bezier suave.
+  Nenhum polygon → nenhum artefato de anti-aliasing na base da curva.
+*/
+.main-header {
+  padding-bottom: 3.5rem;       /* espaço para a onda mergulhar */
+  clip-path: url(#clip-juk-wave);
+}
+
+/* Em viewports estreitas a curva some — volta ao recorte reto */
+@media (max-width: 768px) {
+  .main-header {
+    padding-bottom: 0;
+    clip-path: none;
+  }
+}

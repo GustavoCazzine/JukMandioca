@@ -1,0 +1,109 @@
+/* tokens.css — Fonte única de verdade do Design System JukMandioca.
+   Edite os aliases semânticos no final para trocar o tema inteiro. */
+:root {
+
+  /* ── Paleta base ── */
+  --color-white:     #ffffff;
+  --color-off-white: #f8f9fa;
+  --color-charcoal:  #2d3748;   /* cinza chumbo — texto corpo e UI escura */
+  --color-black:     #1a202c;   /* quase-preto — headings principais */
+  --color-yellow:    #f5b301;   /* amarelo industrial — CTA e destaque */
+  --color-whatsapp:  #25d366;
+
+  /* ── Bordas ── */
+  --color-border:        #e2e8f0;
+  --color-border-input:  #cbd5e0;
+  --color-border-header: rgba(0, 0, 0, 0.07);
+  --color-border-toggle: rgba(45, 55, 72, 0.15);
+  --color-border-nav:    rgba(45, 55, 72, 0.08);
+
+  /* ── Texto auxiliar ── */
+  --color-footer-text: rgba(255, 255, 255, 0.84);
+  --color-muted:       #9aa3b0;
+
+  /* ── Overlays (hero backgrounds) ── */
+  --overlay-dark:      rgba(0,  0,  0,   0.82);
+  --overlay-dark-soft: rgba(0,  0,  0,   0.74);
+  --overlay-charcoal:  rgba(26, 32, 44,  0.80);
+  --overlay-yellow:    rgba(245,179, 1,  0.18);
+  --overlay-white:     rgba(255,255,255, 0.90);
+
+  /* ── Tipografia ── */
+  --font-sans:    'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  --font-display: 'Montserrat', sans-serif;
+
+  --text-xs:   0.68rem;    /*  ~11px */
+  --text-sm:   0.875rem;   /*  ~14px */
+  --text-base: 0.95rem;    /*  ~15px */
+  --text-lg:   1.125rem;   /*  ~18px */
+  --text-xl:   1.25rem;    /*  ~20px */
+  --text-2xl:  1.5rem;     /*  ~24px */
+  --text-3xl:  1.875rem;   /*  ~30px */
+  --text-hero: clamp(2rem, 3.5vw + 1rem, 3.5rem);
+
+  /* ── Espaçamento (escala 4px) ── */
+  --space-1:  0.25rem;   /*  4px */
+  --space-2:  0.5rem;    /*  8px */
+  --space-3:  0.75rem;   /* 12px */
+  --space-4:  1rem;      /* 16px */
+  --space-5:  1.25rem;   /* 20px */
+  --space-6:  1.5rem;    /* 24px */
+  --space-8:  2rem;      /* 32px */
+  --space-10: 2.5rem;    /* 40px */
+  --space-12: 3rem;      /* 48px */
+  --space-16: 4rem;      /* 64px */
+  --space-20: 5rem;      /* 80px */
+  --space-24: 6rem;      /* 96px */
+
+  /* Aliases legado (mantém componentes existentes funcionando) */
+  --space-xs:  var(--space-1);
+  --space-sm:  var(--space-3);
+  --space-md:  var(--space-5);
+  --space-lg:  var(--space-8);
+  --space-xl:  var(--space-12);
+  --space-2xl: var(--space-20);
+
+  /* ── Layout ── */
+  --container-max: 1120px;
+  --section-gap-y: var(--space-20);
+  --header-h:      80px;   /* altura do main-header */
+  --wave-h:        88px;   /* altura da curva SVG hero */
+
+  /* ── Radius ── */
+  --radius-sm:   2px;
+  --radius-md:   4px;
+  --radius-lg:   8px;
+  --radius-xl:   16px;
+  --radius-pill: 999px;
+
+  /* ── Sombras ── */
+  --shadow-header:         0 2px 20px rgba(0, 0, 0, 0.07);
+  --shadow-card:           0 2px 12px rgba(0, 0, 0, 0.06);
+  --shadow-btn-yellow:     0 6px 20px rgba(245, 179, 1, 0.38);
+  --shadow-btn-dark:       0 6px 16px rgba(26,  32, 44, 0.28);
+  --shadow-whatsapp:       0 10px 24px rgba(37, 211, 102, 0.35);
+  --shadow-whatsapp-hover: 0 14px 26px rgba(37, 211, 102, 0.38);
+
+  /* ── Focus ── */
+  --focus-outline: rgba(245, 179, 1, 0.40);
+  --focus-ring:    0 0 0 3px rgba(245, 179, 1, 0.22);
+
+  /* ── Animação ── */
+  --transition:      220ms ease;
+  --transition-slow: 420ms ease;
+
+  /* ──────────────────────────────────────────────
+     ALIASES SEMÂNTICOS — Design System
+     Para trocar o tema: edite apenas estes valores.
+     Nenhum componente usa variáveis brutas diretamente.
+     ────────────────────────────────────────────── */
+  --bg-page:    var(--color-white);      /* fundo da página */
+  --bg-surface: var(--color-white);      /* cards, header */
+  --bg-dark:    var(--color-charcoal);   /* footer, seções escuras */
+  --text-body:  var(--color-charcoal);   /* parágrafos */
+  --text-head:  var(--color-black);      /* títulos */
+  --text-muted: var(--color-muted);      /* textos secundários */
+  --accent:     var(--color-yellow);     /* botões, destaques */
+  --accent-fg:  var(--color-charcoal);   /* texto sobre o amarelo */
+  --lead:       var(--color-charcoal);   /* cinza chumbo semântico */
+}

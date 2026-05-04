@@ -1,0 +1,8 @@
+/* main.css — Ponto de entrada único. Altere a ordem apenas se houver conflito de cascata. */
+/* Fontes são carregadas via <link rel="preload"> no HTML — sem @import aqui. */
+
+@import './tokens.css';
+@import './base.css';
+@import './components.css';
+@import './components/header.css';
+@import './sections.css';

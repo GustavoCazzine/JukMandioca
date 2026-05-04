@@ -1,0 +1,427 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ─── SEO primário ─── -->
+    <title>JukMandioca Transportes | Logística B2B de Alta Performance</title>
+    <meta name="description" content="Soluções logísticas sob medida para operações B2B de alta exigência: transporte lotação, fracionado e dedicado em todo o território nacional." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.jukmandioca.com.br/" />
+
+    <!-- ─── Open Graph ─── -->
+    <meta property="og:type"        content="website" />
+    <meta property="og:url"         content="https://www.jukmandioca.com.br/" />
+    <meta property="og:title"       content="JukMandioca Transportes | Logística B2B de Alta Performance" />
+    <meta property="og:description" content="Soluções logísticas sob medida para operações B2B de alta exigência: transporte lotação, fracionado e dedicado." />
+    <meta property="og:image"       content="https://www.jukmandioca.com.br/assets/img/og-cover.jpg" />
+    <meta property="og:image:width"  content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale"      content="pt_BR" />
+    <meta property="og:site_name"   content="JukMandioca Transportes" />
+
+    <!-- ─── Twitter Card ─── -->
+    <meta name="twitter:card"        content="summary_large_image" />
+    <meta name="twitter:title"       content="JukMandioca Transportes | Logística B2B de Alta Performance" />
+    <meta name="twitter:description" content="Soluções logísticas sob medida para operações B2B de alta exigência." />
+    <meta name="twitter:image"       content="https://www.jukmandioca.com.br/assets/img/og-cover.jpg" />
+
+    <!-- ─── PWA ─── -->
+    <meta name="theme-color" content="#f5b301" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- ─── Fontes: preconnect + preload não-bloqueante ─── -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="style"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@700;800&display=swap"
+      onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@700;800&display=swap" />
+    </noscript>
+
+    <!-- ─── Preload: hero background (LCP crítico) ─── -->
+    <link rel="preload" as="image" fetchpriority="high"
+      href="https://images.unsplash.com/photo-1494412519320-aa613dfb7738?auto=format&fit=crop&w=1920&q=80" />
+
+    <!-- ─── CSS ─── -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+    <!-- ─── JSON-LD: Organization + LocalBusiness + WebSite ─── -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://www.jukmandioca.com.br/#organization",
+          "name": "JukMandioca Transportes",
+          "url": "https://www.jukmandioca.com.br",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.jukmandioca.com.br/assets/img/logo.png"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+55-11-4000-0000",
+            "email": "contato@jukmandioca.com.br",
+            "contactType": "customer service",
+            "areaServed": "BR",
+            "availableLanguage": "Portuguese"
+          },
+          "sameAs": []
+        },
+        {
+          "@type": "LocalBusiness",
+          "@id": "https://www.jukmandioca.com.br/#localbusiness",
+          "name": "JukMandioca Transportes",
+          "description": "Transportadora especializada em logística B2B com operações de lotação, fracionada e dedicada em todo o Brasil.",
+          "url": "https://www.jukmandioca.com.br",
+          "telephone": "+55-11-4000-0000",
+          "email": "contato@jukmandioca.com.br",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Rua Exemplo, 123",
+            "addressLocality": "Cidade",
+            "addressRegion": "SP",
+            "postalCode": "00000-000",
+            "addressCountry": "BR"
+          },
+          "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+            "opens": "08:00",
+            "closes": "18:00"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.jukmandioca.com.br/#website",
+          "url": "https://www.jukmandioca.com.br",
+          "name": "JukMandioca Transportes",
+          "publisher": { "@id": "https://www.jukmandioca.com.br/#organization" }
+        }
+      ]
+    }
+    </script>
+  </head>
+  <body id="topo">
+
+    <!-- ─── SVG clip-path: onda bezier header → hero ─── -->
+    <!-- Renderizado como 0×0 — não ocupa espaço visual -->
+    <svg aria-hidden="true" focusable="false"
+         style="position:absolute;width:0;height:0;overflow:hidden">
+      <defs>
+        <!--
+          objectBoundingBox: todos os coords são fração 0–1 do .main-header.
+          Dois segmentos cúbicos → zero vértice exposto na base da curva.
+          Y=0: topo  |  Y≈0.62: nível natural do rodapé do header
+                     |  Y≈1.0:  ponto mais baixo da onda (padding extra)
+        -->
+        <clipPath id="clip-juk-wave" clipPathUnits="objectBoundingBox">
+          <path d="
+            M 0,0
+            L 1,0
+            L 1,0.60
+            C 0.80,0.64  0.64,0.86  0.48,0.96
+            C 0.32,1.00  0.16,0.80  0,0.70
+            Z
+          "/>
+        </clipPath>
+      </defs>
+    </svg>
+
+    <header class="site-header">
+      <div class="pre-header">
+        <div class="container pre-header-inner">
+          <p>Seg–Sex, 8h–18h &nbsp;·&nbsp; +55 (11) 4000-0000</p>
+          <div class="social-links">
+            <a href="mailto:contato@jukmandioca.com.br">contato@jukmandioca.com.br</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="main-header">
+        <div class="container header-inner">
+
+          <a href="index.html" class="logo" aria-label="Página inicial JukMandioca">
+            <span class="logo-mark" aria-hidden="true">JUK</span><span class="logo-text">mandioca</span>
+          </a>
+
+          <button
+            class="menu-toggle"
+            type="button"
+            aria-label="Abrir menu"
+            aria-controls="primary-nav"
+            aria-expanded="false"
+          >
+            <span></span><span></span><span></span>
+          </button>
+
+          <nav id="primary-nav" class="nav" aria-label="Navegação principal">
+            <ul class="nav-list">
+              <li><a href="index.html" aria-current="page">Home</a></li>
+              <li><a href="sobre.html">A Empresa</a></li>
+              <li><a href="frota.html">Serviços</a></li>
+              <li><a href="contato.html">Contato</a></li>
+            </ul>
+            <a href="contato.html" class="btn-dark nav-cta">
+              <span>Fale com Especialista</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </nav>
+
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-content">
+          <p class="eyebrow">Logística B2B</p>
+          <h1>
+            PARA CADA<br />
+            <span class="highlight">OPERAÇÃO,</span><br />
+            UMA JUKMANDIOCA<br />
+            <span class="highlight">DIFERENTE.</span>
+          </h1>
+          <p class="hero-subtitle">
+            Performance, rastreabilidade e compromisso operacional para cadeias de suprimentos que não podem parar.
+          </p>
+          <a href="contato.html" class="btn-primary">
+            <span>Solicitar Cotação</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+      </section>
+
+      <section id="sobre" class="about section">
+        <div class="container about-grid">
+          <figure class="about-visual" data-observe>
+            <img
+              src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=1200&q=80"
+              alt="Operação logística com caminhão em terminal"
+              width="1200" height="800"
+              loading="lazy"
+              decoding="async"
+            />
+          </figure>
+
+          <article class="about-copy" data-observe>
+            <h2 class="section-title">CONHEÇA A JUKMANDIOCA</h2>
+            <p>
+              Somos uma transportadora especializada em alta performance, com inteligência operacional para atender
+              rotas críticas, demandas industriais e operações de grande escala.
+            </p>
+            <p>
+              Com foco em agilidade logística, conectamos tecnologia, gestão de risco e eficiência de ponta a ponta
+              para garantir previsibilidade e confiança ao cliente B2B.
+            </p>
+
+            <div class="about-stats" aria-label="Indicadores institucionais">
+              <div class="about-stat" data-observe>
+                <strong>10+</strong>
+                <span>Anos de Operação</span>
+              </div>
+              <div class="about-stat" data-observe>
+                <strong>Milhões</strong>
+                <span>de Toneladas Entregues</span>
+              </div>
+            </div>
+
+            <div class="about-actions">
+              <a href="sobre.html" class="btn-primary">
+                <span>NOSSA HISTÓRIA</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+              <a href="frota.html" class="btn-primary">
+                <span>FROTA E TECNOLOGIA</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="servicos" class="services section">
+        <div class="container">
+          <h2 class="section-title">Soluções de transporte</h2>
+          <p class="section-subtitle">Modalidades desenhadas para diferentes níveis de urgência, volume e controle.</p>
+
+          <div class="services-grid">
+            <article class="card service-card" data-observe>
+              <div class="service-media">
+                <img
+                  src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80"
+                  alt="Operação de carga em armazém logístico"
+                  width="1200" height="800"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="service-body">
+                <h3>Lotação</h3>
+                <p>Carga exclusiva para rotas críticas, com agilidade e máxima previsibilidade de entrega.</p>
+              </div>
+            </article>
+
+            <article class="card service-card" data-observe>
+              <div class="service-media">
+                <img
+                  src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1200&q=80"
+                  alt="Entrega fracionada com caminhão em centro de distribuição"
+                  width="1200" height="800"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="service-body">
+                <h3>Fracionada</h3>
+                <p>Consolidação inteligente para otimizar custo logístico sem comprometer nível de serviço.</p>
+              </div>
+            </article>
+
+            <article class="card service-card" data-observe>
+              <div class="service-media">
+                <img
+                  src="https://images.unsplash.com/photo-1616432043562-3671ea2e5242?auto=format&fit=crop&w=1200&q=80"
+                  alt="Frota dedicada em operação rodoviária"
+                  width="1200" height="800"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="service-body">
+                <h3>Dedicada</h3>
+                <p>Operação customizada com frota e equipe alocadas conforme as regras do seu negócio.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="equipment section">
+        <div class="container">
+          <h2 class="section-title">Capacidade Operacional</h2>
+          <div class="equipment-grid">
+            <article class="equipment-item" data-observe>
+              <h3>Carretas LS</h3>
+              <p>Até 32 toneladas</p>
+            </article>
+            <article class="equipment-item" data-observe>
+              <h3>Trucks</h3>
+              <p>Até 14 toneladas</p>
+            </article>
+            <article class="equipment-item" data-observe>
+              <h3>VUCs e Leves</h3>
+              <p>Distribuição Urbana</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="compliance-band section">
+        <div class="container">
+          <h2>Carga 100% Segurada e Monitorada</h2>
+          <p>
+            Atuamos com rigor no PGR, rastreamento 24h e integração com normas de segurança industrial para proteger
+            cada etapa da operação logística.
+          </p>
+        </div>
+      </section>
+
+      <section class="aggregates section">
+        <div class="container aggregates-grid">
+          <article class="aggregates-copy" data-observe>
+            <h2 class="section-title">Seja um Motorista Agregado</h2>
+            <p>
+              Faça parte da nossa rede logística. Buscamos parceiros com frota própria para operações contínuas e
+              rentáveis em todo o território nacional.
+            </p>
+            <a href="contato.html" class="btn-primary">
+              <span>Cadastrar meu Veículo</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </article>
+
+          <figure class="aggregates-visual" data-observe>
+            <img
+              src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1200&q=80"
+              alt="Motorista agregado ao lado de caminhão"
+              width="1200" height="800"
+              loading="lazy"
+              decoding="async"
+            />
+          </figure>
+        </div>
+      </section>
+
+      <section id="clientes" class="clients section">
+        <div class="container">
+          <h2 class="section-title">Marcas que confiam na nossa operação</h2>
+
+          <div class="clients-marquee" aria-label="Carrossel de clientes">
+            <div class="clients-track">
+              <div class="client-logo">LOGO CLIENTE</div>
+              <div class="client-logo">LOGO CLIENTE</div>
+              <div class="client-logo">LOGO CLIENTE</div>
+              <div class="client-logo">LOGO CLIENTE</div>
+              <div class="client-logo">LOGO CLIENTE</div>
+              <div class="client-logo">LOGO CLIENTE</div>
+              <div class="client-logo">LOGO CLIENTE</div>
+              <div class="client-logo">LOGO CLIENTE</div>
+              <div class="client-logo">LOGO CLIENTE</div>
+              <div class="client-logo">LOGO CLIENTE</div>
+              <div class="client-logo">LOGO CLIENTE</div>
+              <div class="client-logo">LOGO CLIENTE</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <address>
+          <strong>JukMandioca Transportes</strong>
+          <p><a href="mailto:contato@jukmandioca.com.br">contato@jukmandioca.com.br</a></p>
+          <p><a href="tel:+551140000000">+55 (11) 4000-0000</a></p>
+        </address>
+        <div>
+          <p>Sede Operacional: Rua Exemplo, 123 — Distrito Industrial, Cidade/UF — CEP 00000-000</p>
+          <p>CNPJ: 12.345.678/0001-90</p>
+          <a href="#topo" class="back-top">Voltar ao topo</a>
+        </div>
+      </div>
+    </footer>
+
+    <a
+      class="whatsapp-float"
+      href="https://wa.me/551140000000"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Falar no WhatsApp"
+    >
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path
+          d="M20.52 3.48A11.8 11.8 0 0 0 12.06 0C5.52 0 .21 5.3.2 11.83c0 2.08.54 4.1 1.57 5.88L0 24l6.45-1.7a11.83 11.83 0 0 0 5.6 1.42h.01c6.54 0 11.85-5.31 11.86-11.85.01-3.16-1.22-6.13-3.4-8.39Zm-8.46 18.2h-.01a9.93 9.93 0 0 1-5.05-1.38l-.36-.21-3.83 1.01 1.02-3.73-.23-.38a9.89 9.89 0 0 1-1.53-5.24C2.08 6.3 6.34 2.04 11.8 2.03c2.64 0 5.12 1.02 6.98 2.88a9.8 9.8 0 0 1 2.88 6.97c0 5.46-4.26 9.8-9.6 9.8Zm5.42-7.39c-.3-.15-1.77-.87-2.04-.97-.27-.1-.46-.15-.66.15-.2.3-.76.97-.93 1.16-.17.2-.34.23-.64.08-.3-.15-1.25-.46-2.38-1.46-.88-.78-1.47-1.74-1.64-2.04-.17-.3-.02-.47.13-.62.14-.14.3-.34.45-.5.15-.17.2-.29.3-.49.1-.2.05-.37-.02-.52-.08-.15-.66-1.6-.9-2.2-.24-.58-.49-.5-.66-.5h-.56c-.2 0-.52.08-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.06 2.9 1.2 3.1.15.2 2.1 3.2 5.08 4.48.71.3 1.27.48 1.7.62.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.41.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.56-.34Z"
+          fill="currentColor"
+        />
+      </svg>
+    </a>
+
+    <script src="assets/js/main.js" type="module"></script>
+  </body>
+</html>

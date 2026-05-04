@@ -1,0 +1,13 @@
+{
+  "name": "JukMandioca Transportes",
+  "short_name": "JukMandioca",
+  "description": "Logística B2B de alta performance para cadeias de suprimentos que não podem parar.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#f8f9fa",
+  "theme_color": "#f5b301",
+  "icons": [
+    { "src": "/assets/img/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/assets/img/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
