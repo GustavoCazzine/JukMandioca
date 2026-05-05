@@ -109,32 +109,8 @@
   </head>
   <body id="topo">
 
-    <!-- ─── SVG clip-path: onda bezier header → hero ─── -->
-    <!-- Renderizado como 0×0 — não ocupa espaço visual -->
-    <svg aria-hidden="true" focusable="false"
-         style="position:absolute;width:0;height:0;overflow:hidden">
-      <defs>
-        <!--
-          objectBoundingBox: todos os coords são fração 0–1 do .main-header.
-          Dois segmentos cúbicos → zero vértice exposto na base da curva.
-          Y=0: topo  |  Y≈0.62: nível natural do rodapé do header
-                     |  Y≈1.0:  ponto mais baixo da onda (padding extra)
-        -->
-        <clipPath id="clip-juk-wave" clipPathUnits="objectBoundingBox">
-          <path d="
-            M 0,0
-            L 1,0
-            L 1,0.60
-            C 0.80,0.64  0.64,0.86  0.48,0.96
-            C 0.32,1.00  0.16,0.80  0,0.70
-            Z
-          "/>
-        </clipPath>
-      </defs>
-    </svg>
-
     <header class="site-header">
-      <div class="main-header main-header--wave">
+      <div class="main-header">
         <div class="container header-inner">
 
           <a href="index.html" class="logo" aria-label="Página inicial JukMandioca">
