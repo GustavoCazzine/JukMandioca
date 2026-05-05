@@ -89,41 +89,6 @@
   box-shadow: var(--shadow-header);
 }
 
-.pre-header {
-  background: var(--color-off-white);
-  border-bottom: 1px solid var(--color-border);
-}
-
-.pre-header-inner {
-  min-height: 35px;
-  padding: 4px 0;          /* +4px topo/base — mais respiro sem crescer demais */
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--space-sm);
-}
-
-.pre-header-inner p,
-.pre-header-inner a {
-  margin: 0;
-  color: var(--color-topbar-text);  /* cinza #4a5568 — menos poluído que preto */
-  font-size: 11px;                  /* discreto: não compete com o main-header */
-  font-weight: 600;
-  letter-spacing: 0.06em;
-}
-
-.social-links {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.55rem;
-}
-
-.social-links a {
-  color: var(--color-charcoal);
-  font-size: 0.7rem;
-  font-weight: 700;
-  text-transform: uppercase;
-}
 
 .main-header {
   background: var(--accent);
