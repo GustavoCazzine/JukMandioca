@@ -118,6 +118,13 @@
   align-items: center;
 }
 
+/* Centralização vertical do bloco de texto frente à imagem */
+.about-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .about-copy h2 { margin-bottom: 1rem; }
 
 .about-copy p + p { margin-top: 0.85rem; }
@@ -411,6 +418,27 @@
 
 /* ─── Contact ─── */
 .contact-panel { background: var(--bg-page); }
+
+/* Grid do painel de contato: formulário + mapa lado a lado */
+.contact-panel .about-grid {
+  align-items: start;      /* topo alinhado — evita mapa esticado verticalmente */
+}
+
+/* Iframe do mapa: altura mínima garantida em todos os breakpoints */
+.contact-panel .content-figure iframe {
+  display: block;
+  width: 100%;
+  min-height: 300px;
+  height: 340px;
+  border: 0;
+}
+
+@media (max-width: 900px) {
+  .contact-panel .content-figure iframe {
+    height: 260px;
+    min-height: 220px;
+  }
+}
 
 /* ─── Responsivo: seções ─── */
 @media (max-width: 900px) {

@@ -73,6 +73,8 @@
   background: var(--bg-surface);
   border-radius: var(--radius-sm);
   border: 1px solid var(--color-border);
+  /* Sombra difusa extra para destacar o card do fundo branco */
+  box-shadow: var(--shadow-card);
 }
 
 /* ─── Header ─── */
