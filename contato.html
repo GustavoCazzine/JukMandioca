@@ -137,33 +137,36 @@
 
           <div class="card form-panel" data-observe>
             <h2>Dados da Operação</h2>
+            <p style="font-size:var(--text-sm);color:var(--color-muted);margin-bottom:.5rem;">
+              Campos marcados com <span class="req" aria-hidden="true">*</span> são obrigatórios.
+            </p>
             <form id="contact-form" action="#" method="post" novalidate>
               <div class="form-group">
-                <label for="empresa">Nome da Empresa</label>
+                <label for="empresa">Nome da Empresa<span class="req" aria-label="obrigatório">*</span></label>
                 <input id="empresa" name="empresa" type="text" autocomplete="organization" required />
               </div>
               <div class="form-group">
-                <label for="cnpj">CNPJ</label>
+                <label for="cnpj">CNPJ<span class="req" aria-label="obrigatório">*</span></label>
                 <input id="cnpj" name="cnpj" type="text" inputmode="numeric" required minlength="18" maxlength="18" />
               </div>
               <div class="form-group">
-                <label for="email">E-mail</label>
+                <label for="email">E-mail<span class="req" aria-label="obrigatório">*</span></label>
                 <input id="email" name="email" type="email" autocomplete="email" required />
               </div>
               <div class="form-group">
-                <label for="telefone">Telefone</label>
+                <label for="telefone">Telefone<span class="req" aria-label="obrigatório">*</span></label>
                 <input id="telefone" name="telefone" type="tel" autocomplete="tel" required minlength="14" maxlength="15" />
               </div>
               <div class="form-group">
-                <label for="origem">Origem</label>
+                <label for="origem">Origem<span class="req" aria-label="obrigatório">*</span></label>
                 <input id="origem" name="origem" type="text" required />
               </div>
               <div class="form-group">
-                <label for="destino">Destino</label>
+                <label for="destino">Destino<span class="req" aria-label="obrigatório">*</span></label>
                 <input id="destino" name="destino" type="text" required />
               </div>
               <div class="form-group">
-                <label for="carga">Tipo de Carga</label>
+                <label for="carga">Tipo de Carga<span class="req" aria-label="obrigatório">*</span></label>
                 <select id="carga" name="carga" required>
                   <option value="">Selecione</option>
                   <option value="lotacao">Lotação</option>
@@ -198,6 +201,21 @@
         </div>
       </div>
     </footer>
+
+    <a
+      class="whatsapp-float"
+      href="https://wa.me/551140000000"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Falar no WhatsApp"
+    >
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path
+          d="M20.52 3.48A11.8 11.8 0 0 0 12.06 0C5.52 0 .21 5.3.2 11.83c0 2.08.54 4.1 1.57 5.88L0 24l6.45-1.7a11.83 11.83 0 0 0 5.6 1.42h.01c6.54 0 11.85-5.31 11.86-11.85.01-3.16-1.22-6.13-3.4-8.39Zm-8.46 18.2h-.01a9.93 9.93 0 0 1-5.05-1.38l-.36-.21-3.83 1.01 1.02-3.73-.23-.38a9.89 9.89 0 0 1-1.53-5.24C2.08 6.3 6.34 2.04 11.8 2.03c2.64 0 5.12 1.02 6.98 2.88a9.8 9.8 0 0 1 2.88 6.97c0 5.46-4.26 9.8-9.6 9.8Zm5.42-7.39c-.3-.15-1.77-.87-2.04-.97-.27-.1-.46-.15-.66.15-.2.3-.76.97-.93 1.16-.17.2-.34.23-.64.08-.3-.15-1.25-.46-2.38-1.46-.88-.78-1.47-1.74-1.64-2.04-.17-.3-.02-.47.13-.62.14-.14.3-.34.45-.5.15-.17.2-.29.3-.49.1-.2.05-.37-.02-.52-.08-.15-.66-1.6-.9-2.2-.24-.58-.49-.5-.66-.5h-.56c-.2 0-.52.08-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.06 2.9 1.2 3.1.15.2 2.1 3.2 5.08 4.48.71.3 1.27.48 1.7.62.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.41.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.56-.34Z"
+          fill="currentColor"
+        />
+      </svg>
+    </a>
 
     <script src="assets/js/main.js" type="module"></script>
   </body>

@@ -274,6 +274,14 @@
   color: var(--color-charcoal);
 }
 
+/* Asterisco de campo obrigatório */
+.req {
+  color: var(--color-error);
+  margin-left: 0.2em;
+  font-weight: 700;
+  line-height: 1;
+}
+
 .form-panel {
   padding: var(--space-md);
 }

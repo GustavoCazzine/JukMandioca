@@ -19,6 +19,9 @@ body {
   line-height: 1.6;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+  /* Evita que o botão flutuante do WhatsApp (58px + 1.15rem margem ≈ 76px)
+     cubra o conteúdo do rodapé ao rolar até o fim da página */
+  padding-bottom: 5rem;
 }
 
 img {

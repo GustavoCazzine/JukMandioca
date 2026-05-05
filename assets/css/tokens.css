@@ -9,6 +9,7 @@
   --color-black:     #1a202c;   /* quase-preto — headings principais */
   --color-yellow:    #f5b301;   /* amarelo industrial — CTA e destaque */
   --color-whatsapp:  #25d366;
+  --color-error:     #e53e3e;   /* vermelho — campos inválidos e indicadores required */
 
   /* ── Bordas ── */
   --color-border:        #e2e8f0;
