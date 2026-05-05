@@ -21,6 +21,7 @@
   /* ── Texto auxiliar ── */
   --color-footer-text: rgba(255, 255, 255, 0.84);
   --color-muted:       #9aa3b0;
+  --color-topbar-text: #4a5568;   /* cinza discreto — topbar menos poluída */
 
   /* ── Overlays (hero backgrounds) ── */
   --overlay-dark:      rgba(0,  0,  0,   0.82);

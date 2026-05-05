@@ -96,18 +96,20 @@
 
 .pre-header-inner {
   min-height: 35px;
+  padding: 4px 0;          /* +4px topo/base — mais respiro sem crescer demais */
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: var(--space-sm);
 }
 
-.pre-header-inner p {
+.pre-header-inner p,
+.pre-header-inner a {
   margin: 0;
-  color: var(--color-charcoal);
-  font-size: var(--text-xs);
-  font-weight: 700;
-  letter-spacing: 0.08em;
+  color: var(--color-topbar-text);  /* cinza #4a5568 — menos poluído que preto */
+  font-size: 11px;                  /* discreto: não compete com o main-header */
+  font-weight: 600;
+  letter-spacing: 0.06em;
 }
 
 .social-links {
