@@ -307,7 +307,10 @@
 
 /* ─── Compliance band ─── */
 .compliance-band {
-  background: var(--accent);
+  background-color: var(--accent);
+  /* Pattern diagonal sutil — quebra o bloco sólido sem reduzir legibilidade */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32'%3E%3Cpath d='M0 32L32 0M-4 4L4-4M28 36L36 28' stroke='%231a202c' stroke-width='1.5' fill='none' opacity='.07'/%3E%3C/svg%3E");
+  background-repeat: repeat;
   text-align: center;
 }
 
@@ -377,17 +380,26 @@
 }
 
 .client-logo {
-  min-width: 210px;
-  height: 88px;
+  min-width: 180px;
+  height: 72px;
   display: grid;
   place-items: center;
+  /* Borda tracejada indica "logo a inserir" sem parecer vazio */
+  border: 1.5px dashed var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-off-white);
   color: var(--color-muted);
   font-family: var(--font-display);
-  font-size: 1.03rem;
-  font-weight: 800;
-  letter-spacing: 0.04em;
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
   white-space: nowrap;
+  opacity: 0.7;
+  transition: opacity var(--transition);
 }
+
+.client-logo:hover { opacity: 1; }
 
 @keyframes marquee {
   from { transform: translateX(0); }
