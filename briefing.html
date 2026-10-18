@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Briefing do site | JukMandioca Transportes</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@700;800&display=swap" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+      .brief { padding: var(--space-12) 0 var(--space-20); background: var(--bg-page); }
+      .brief-wrap { width: min(100% - 2rem, 760px); margin-inline: auto; }
+      .brief-head h1 { font-family: var(--font-display); font-weight: 800; font-size: clamp(1.7rem, 4vw, 2.4rem); line-height: 1.1; margin: 0 0 .6rem; color: var(--color-black); text-transform: uppercase; }
+      .brief-head p { margin: 0; color: var(--color-charcoal); max-width: 60ch; }
+      .brief-progress { margin: var(--space-6) 0; height: 8px; background: var(--color-border); border-radius: 99px; overflow: hidden; }
+      .brief-progress span { display: block; height: 100%; width: 0; background: var(--accent); transition: width .25s ease; }
+      .brief fieldset { border: 1px solid var(--color-border); border-top: 5px solid var(--accent); background: var(--bg-surface); margin: 0 0 var(--space-5); padding: var(--space-5) var(--space-6) var(--space-6); border-radius: var(--radius-sm); min-width: 0; }
+      .brief legend { font-family: var(--font-display); font-weight: 800; font-size: 1.15rem; color: var(--color-black); padding: 0 .4rem; margin-left: -.4rem; }
+      .brief .hint { display: block; font-size: var(--text-sm); color: #5b6573; margin-top: .25rem; font-weight: 400; }
+      .brief .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0 var(--space-4); }
+      .brief .checks { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .5rem var(--space-4); margin-top: .5rem; }
+      .brief .checks label, .brief .radios label { display: flex; gap: .55rem; align-items: center; font-weight: 400; color: var(--color-charcoal); margin: 0; cursor: pointer; }
+      .brief .radios { display: flex; flex-wrap: wrap; gap: .5rem 1.4rem; margin-top: .5rem; }
+      .brief input[type=checkbox], .brief input[type=radio] { width: 18px; height: 18px; accent-color: var(--color-charcoal); flex: none; margin: 0; }
+      .brief .q { margin-top: 1rem; }
+      .brief .q > label, .brief .q > .qlabel { display: block; font-weight: 500; color: var(--color-charcoal); margin-bottom: .3rem; }
+      .brief-send { display: grid; gap: .8rem; justify-items: start; }
+      .brief-send p { margin: 0; font-size: var(--text-sm); color: #5b6573; }
+      .brief .form-error { margin-bottom: var(--space-4); }
+      @media (max-width: 600px) { .brief .row2, .brief .checks { grid-template-columns: 1fr; } .brief fieldset { padding: var(--space-4); } }
+    </style>
+  </head>
+  <body id="topo">
+    <header class="site-header">
+      <div class="main-header">
+        <div class="container header-inner">
+          <a href="index.html" class="logo" aria-label="Página inicial JukMandioca">
+            <span class="logo-mark" aria-hidden="true">JUK</span><span class="logo-text">mandioca</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="brief">
+      <div class="brief-wrap">
+        <div class="brief-head">
+          <h1>Informações para o site</h1>
+          <p>Leva uns 5 minutos. Responde o que souber, o resto a gente ajusta depois. No final, as respostas vão direto para o WhatsApp do Gustavo.</p>
+        </div>
+        <div class="brief-progress" aria-hidden="true"><span id="bar"></span></div>
+
+        <form id="brief" novalidate>
+          <fieldset>
+            <legend>1. Empresa</legend>
+            <div class="q"><label for="nome">Nome que aparece no site *</label><input id="nome" name="Nome no site" value="JukMandioca Transportes" required /></div>
+            <div class="row2">
+              <div class="q"><label for="razao">Razão social</label><input id="razao" name="Razão social" /></div>
+              <div class="q"><label for="cnpj">CNPJ</label><input id="cnpj" name="CNPJ" inputmode="numeric" maxlength="18" placeholder="00.000.000/0000-00" /></div>
+            </div>
+            <div class="row2">
+              <div class="q"><label for="cidade">Cidade da base *</label><input id="cidade" name="Cidade da base" required placeholder="Ex.: Piracicaba – SP" /></div>
+              <div class="q"><label for="desde">Desde quando opera</label><input id="desde" name="Opera desde" placeholder="Ex.: 2024, ou ainda vai começar" /></div>
+            </div>
+            <div class="q"><label for="endereco">Endereço para mostrar no site<span class="hint">Deixe em branco se não quiser mostrar.</span></label><input id="endereco" name="Endereço" /></div>
+            <div class="q"><label for="historia">Conta em 2 ou 3 frases como a empresa começou</label><textarea id="historia" name="História" rows="3"></textarea></div>
+          </fieldset>
+
+          <fieldset>
+            <legend>2. Contato</legend>
+            <div class="row2">
+              <div class="q"><label for="whats">WhatsApp comercial *<span class="hint">Para onde vão as cotações do site.</span></label><input id="whats" name="WhatsApp comercial" type="tel" inputmode="tel" required placeholder="(19) 90000-0000" /></div>
+              <div class="q"><label for="fone">Telefone fixo</label><input id="fone" name="Telefone fixo" type="tel" inputmode="tel" /></div>
+            </div>
+            <div class="row2">
+              <div class="q"><label for="mail">E-mail</label><input id="mail" name="E-mail" type="email" /></div>
+              <div class="q"><label for="insta">Instagram</label><input id="insta" name="Instagram" placeholder="@" /></div>
+            </div>
+            <div class="q"><label for="horario">Horário de atendimento</label><input id="horario" name="Horário" placeholder="Ex.: seg. a sex. 8h–18h, sáb. 8h–12h" /></div>
+          </fieldset>
+
+          <fieldset>
+            <legend>3. Operação</legend>
+            <div class="q"><span class="qlabel">Que tipo de frete vocês fazem? *</span>
+              <div class="checks" data-group="Tipos de frete" data-required>
+                <label><input type="checkbox" value="Lotação (carga exclusiva)" />Lotação (carga exclusiva)</label>
+                <label><input type="checkbox" value="Fracionada" />Fracionada</label>
+                <label><input type="checkbox" value="Dedicada (veículo fixo para o cliente)" />Dedicada (veículo fixo)</label>
+                <label><input type="checkbox" value="Expressa no mesmo dia" />Expressa no mesmo dia</label>
+                <label><input type="checkbox" value="Coleta para e-commerce" />Coleta para e-commerce</label>
+                <label><input type="checkbox" value="Mudanças pequenas" />Mudanças pequenas</label>
+              </div>
+            </div>
+            <div class="q"><span class="qlabel">Quais veículos vocês têm?</span>
+              <div class="checks" data-group="Veículos">
+                <label><input type="checkbox" value="Moto" />Moto</label>
+                <label><input type="checkbox" value="Utilitário (Fiorino, Kangoo)" />Utilitário (Fiorino, Kangoo)</label>
+                <label><input type="checkbox" value="Van" />Van</label>
+                <label><input type="checkbox" value="VUC / 3/4" />VUC / 3/4</label>
+                <label><input type="checkbox" value="Toco" />Toco</label>
+                <label><input type="checkbox" value="Truck" />Truck</label>
+                <label><input type="checkbox" value="Carreta" />Carreta</label>
+                <label><input type="checkbox" value="Usa agregados/parceiros" />Usa agregados/parceiros</label>
+              </div>
+            </div>
+            <div class="row2">
+              <div class="q"><label for="frota">Quantos veículos no total</label><input id="frota" name="Total de veículos" inputmode="numeric" /></div>
+              <div class="q"><label for="peso">Maior carga que levam</label><input id="peso" name="Carga máxima" placeholder="Ex.: 14 toneladas" /></div>
+            </div>
+            <div class="q"><label for="area">Para onde atendem? *<span class="hint">Cidades, regiões ou estados.</span></label><input id="area" name="Área de atendimento" required placeholder="Ex.: região de Campinas e Piracicaba, todo o estado de SP" /></div>
+            <div class="q"><label for="corte">Até que horas o cliente pede para coletar no mesmo dia?</label><input id="corte" name="Horário limite mesmo dia" placeholder="Ex.: 14h, ou não fazemos mesmo dia" /></div>
+            <div class="q"><span class="qlabel">A carga tem seguro?</span>
+              <div class="radios" data-group="Seguro de carga">
+                <label><input type="radio" name="seguro" value="Sim" />Sim</label>
+                <label><input type="radio" name="seguro" value="Não" />Não</label>
+                <label><input type="radio" name="seguro" value="Em contratação" />Em contratação</label>
+              </div>
+            </div>
+            <div class="q"><span class="qlabel">Tem rastreamento nos veículos?</span>
+              <div class="radios" data-group="Rastreamento">
+                <label><input type="radio" name="rastreio" value="Sim, todos" />Sim, todos</label>
+                <label><input type="radio" name="rastreio" value="Alguns" />Alguns</label>
+                <label><input type="radio" name="rastreio" value="Não" />Não</label>
+              </div>
+            </div>
+            <div class="q"><span class="qlabel">Emite nota fiscal / CT-e?</span>
+              <div class="radios" data-group="Nota fiscal / CT-e">
+                <label><input type="radio" name="nf" value="Sim" />Sim</label>
+                <label><input type="radio" name="nf" value="Não" />Não</label>
+              </div>
+            </div>
+            <div class="q"><span class="qlabel">Quer receber cadastro de motoristas agregados pelo site?</span>
+              <div class="radios" data-group="Agregados pelo site">
+                <label><input type="radio" name="agreg" value="Sim" />Sim</label>
+                <label><input type="radio" name="agreg" value="Não" />Não</label>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>4. Clientes</legend>
+            <div class="q"><span class="qlabel">Que tipo de cliente vocês atendem?</span>
+              <div class="checks" data-group="Segmentos">
+                <label><input type="checkbox" value="Indústria" />Indústria</label>
+                <label><input type="checkbox" value="Varejo / lojas" />Varejo / lojas</label>
+                <label><input type="checkbox" value="E-commerce" />E-commerce</label>
+                <label><input type="checkbox" value="Autopeças" />Autopeças</label>
+                <label><input type="checkbox" value="Construção" />Construção</label>
+                <label><input type="checkbox" value="Agronegócio" />Agronegócio</label>
+                <label><input type="checkbox" value="Pessoa física" />Pessoa física</label>
+              </div>
+            </div>
+            <div class="q"><label for="clientes">Clientes que podem aparecer no site (com autorização)</label><textarea id="clientes" name="Clientes para citar" rows="2"></textarea></div>
+            <div class="q"><label for="dif">Por que o cliente escolhe vocês e não outra transportadora?</label><textarea id="dif" name="Diferencial" rows="3" placeholder="Ex.: atendimento direto, preço, rapidez, cuidado com a carga"></textarea></div>
+          </fieldset>
+
+          <fieldset>
+            <legend>5. Site e marca</legend>
+            <div class="q"><span class="qlabel">Já tem logo?</span>
+              <div class="radios" data-group="Logo">
+                <label><input type="radio" name="logo" value="Sim, mando no WhatsApp" />Sim, mando no WhatsApp</label>
+                <label><input type="radio" name="logo" value="Não, quero que criem" />Não, quero que criem</label>
+              </div>
+            </div>
+            <div class="q"><span class="qlabel">Tem fotos dos caminhões, da equipe ou do galpão?</span>
+              <div class="radios" data-group="Fotos próprias">
+                <label><input type="radio" name="fotos" value="Sim, mando no WhatsApp" />Sim, mando no WhatsApp</label>
+                <label><input type="radio" name="fotos" value="Ainda não" />Ainda não</label>
+              </div>
+            </div>
+            <div class="q"><label for="cores">As cores amarelo e cinza escuro estão certas?</label><input id="cores" name="Cores" placeholder="Ex.: sim, ou prefiro azul e branco" /></div>
+            <div class="q"><label for="dominio">Endereço do site que você quer</label><input id="dominio" name="Domínio desejado" placeholder="Ex.: jukmandioca.com.br" /></div>
+            <div class="q"><label for="obs">Algo mais que precisa ter no site?</label><textarea id="obs" name="Observações" rows="3"></textarea></div>
+          </fieldset>
+
+          <div class="brief-send">
+            <button type="submit" class="btn-primary">
+              <span>Enviar respostas pelo WhatsApp</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <p>Abre o WhatsApp com tudo preenchido. É só apertar enviar.</p>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <script>
+      const DESTINO = '5519981559831';
+      const f = document.getElementById('brief');
+      const bar = document.getElementById('bar');
+
+      const cnpj = document.getElementById('cnpj');
+      cnpj.addEventListener('input', () => {
+        cnpj.value = cnpj.value.replace(/\D/g, '').slice(0, 14)
+          .replace(/^(\d{2})(\d)/, '$1.$2').replace(/^(\d{2})\.(\d{3})(\d)/, '$1.$2.$3')
+          .replace(/\.(\d{3})(\d)/, '.$1/$2').replace(/(\d{4})(\d)/, '$1-$2');
+      });
+      document.querySelectorAll('input[type=tel]').forEach(el => el.addEventListener('input', () => {
+        const d = el.value.replace(/\D/g, '').slice(0, 11);
+        el.value = d.length <= 10
+          ? d.replace(/^(\d{2})(\d)/, '($1) $2').replace(/(\d{4})(\d)/, '$1-$2')
+          : d.replace(/^(\d{2})(\d)/, '($1) $2').replace(/(\d{5})(\d)/, '$1-$2');
+      }));
+
+      const fields = () => [...f.querySelectorAll('input[name]:not([type=radio]), textarea[name]')];
+      const groups = () => [...f.querySelectorAll('[data-group]')];
+      const groupVal = g => [...g.querySelectorAll('input:checked')].map(i => i.value).join(', ');
+
+      function progress() {
+        const items = [...fields().map(e => e.value.trim()), ...groups().map(groupVal)];
+        bar.style.width = Math.round(items.filter(Boolean).length / items.length * 100) + '%';
+      }
+      f.addEventListener('input', progress);
+      f.addEventListener('change', progress);
+      progress();
+
+      function error(msg, el) {
+        let box = f.querySelector('.form-error');
+        if (!box) { box = document.createElement('p'); box.className = 'form-error'; box.setAttribute('role', 'alert'); f.prepend(box); }
+        box.textContent = msg; box.hidden = !msg;
+        if (el) { el.scrollIntoView({ behavior: 'smooth', block: 'center' }); (el.focus ? el : el.querySelector('input'))?.focus(); }
+      }
+
+      f.addEventListener('submit', e => {
+        e.preventDefault();
+        const miss = fields().find(el => el.required && !el.value.trim());
+        if (miss) return error('Falta preencher: ' + miss.name + '.', miss);
+        const missG = groups().find(g => g.hasAttribute('data-required') && !groupVal(g));
+        if (missG) return error('Marque pelo menos um tipo de frete.', missG);
+        error('');
+        const linhas = [];
+        f.querySelectorAll('fieldset').forEach(fs => {
+          const sec = [];
+          fs.querySelectorAll('input[name]:not([type=radio]), textarea[name], [data-group]').forEach(el => {
+            const v = el.dataset && el.dataset.group ? groupVal(el) : el.value.trim();
+            const k = el.dataset && el.dataset.group ? el.dataset.group : el.name;
+            if (v) sec.push(`${k}: ${v}`);
+          });
+          if (sec.length) linhas.push(`*${fs.querySelector('legend').textContent}*`, ...sec, '');
+        });
+        const msg = `Briefing do site – JukMandioca\n\n${linhas.join('\n')}`;
+        window.open(`https://wa.me/${DESTINO}?text=${encodeURIComponent(msg)}`, '_blank', 'noopener');
+      });
+    </script>
+  </body>
+</html>
