@@ -65,7 +65,6 @@
           },
           "contactPoint": {
             "@type": "ContactPoint",
-            "telephone": "+55-11-4000-0000",
             "email": "contato@jukmandioca.com.br",
             "contactType": "customer service",
             "areaServed": "BR",
@@ -79,7 +78,7 @@
           "name": "JukMandioca Transportes",
           "description": "Transportadora especializada em logística B2B com operações de lotação, fracionada e dedicada em todo o Brasil.",
           "url": "https://www.jukmandioca.com.br",
-          "telephone": "+55-11-4000-0000",
+          
           "email": "contato@jukmandioca.com.br",
           "address": {
             "@type": "PostalAddress",
@@ -168,6 +167,34 @@
         </div>
       </section>
 
+      <section class="quick-quote" aria-label="Cotação rápida">
+        <div class="container">
+          <form class="quick-quote-form" data-quote-form novalidate>
+            <div class="qq-field">
+              <label for="qq-origem">Origem</label>
+              <input id="qq-origem" name="origem" type="text" placeholder="Cidade de coleta" required />
+            </div>
+            <div class="qq-field">
+              <label for="qq-destino">Destino</label>
+              <input id="qq-destino" name="destino" type="text" placeholder="Cidade de entrega" required />
+            </div>
+            <div class="qq-field">
+              <label for="qq-carga">Modalidade</label>
+              <select id="qq-carga" name="carga">
+                <option>Lotação</option>
+                <option>Fracionada</option>
+                <option>Dedicada</option>
+                <option>Expressa (mesmo dia)</option>
+              </select>
+            </div>
+            <button type="submit" class="btn-dark">
+              <span>Cotar no WhatsApp</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </form>
+        </div>
+      </section>
+
       <section id="sobre" class="about section">
         <div class="container about-grid">
           <figure class="about-visual" data-observe>
@@ -183,22 +210,22 @@
           <article class="about-copy" data-observe>
             <h2 class="section-title">CONHEÇA A JUKMANDIOCA</h2>
             <p>
-              Somos uma transportadora especializada em alta performance, com inteligência operacional para atender
-              rotas críticas, demandas industriais e operações de grande escala.
+              Somos uma transportadora de fretes rápidos para empresas que não podem esperar: reposição de estoque,
+              peças para manutenção, entregas entre filiais e cargas urgentes.
             </p>
             <p>
-              Com foco em agilidade logística, conectamos tecnologia, gestão de risco e eficiência de ponta a ponta
-              para garantir previsibilidade e confiança ao cliente B2B.
+              Atendimento direto, valor fechado antes da coleta e acompanhamento da carga até a entrega, com
+              comprovante enviado no seu WhatsApp.
             </p>
 
             <div class="about-stats" aria-label="Indicadores institucionais">
               <div class="about-stat" data-observe>
-                <strong>10+</strong>
-                <span>Anos de Operação</span>
+                <strong>Mesmo dia</strong>
+                <span>Coleta para pedidos urgentes</span>
               </div>
               <div class="about-stat" data-observe>
-                <strong>Milhões</strong>
-                <span>de Toneladas Entregues</span>
+                <strong>Porta a porta</strong>
+                <span>Sem baldeação no caminho</span>
               </div>
             </div>
 
@@ -299,10 +326,10 @@
 
       <section class="compliance-band section">
         <div class="container">
-          <h2>Carga 100% Segurada e Monitorada</h2>
+          <h2>Carga acompanhada do início ao fim</h2>
           <p>
-            Atuamos com rigor no PGR, rastreamento 24h e integração com normas de segurança industrial para proteger
-            cada etapa da operação logística.
+            Rastreamento da rota, aviso na coleta e comprovante com foto e nome de quem recebeu. Você sabe onde
+            está a sua carga sem precisar ligar.
           </p>
         </div>
       </section>
@@ -312,10 +339,10 @@
           <article class="aggregates-copy" data-observe>
             <h2 class="section-title">Seja um Motorista Agregado</h2>
             <p>
-              Faça parte da nossa rede logística. Buscamos parceiros com frota própria para operações contínuas e
-              rentáveis em todo o território nacional.
+              Faça parte da nossa rede logística. Buscamos parceiros com veículo próprio para operações
+              contínuas, com rota e pagamento combinados antes.
             </p>
-            <a href="contato.html" class="btn-primary">
+            <a href="#" data-wa="Olá! Tenho veículo próprio e quero ser agregado." target="_blank" rel="noopener noreferrer" class="btn-primary">
               <span>Cadastrar meu Veículo</span>
               <svg viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -335,26 +362,18 @@
         </div>
       </section>
 
-      <section id="clientes" class="clients section">
+      <section id="segmentos" class="segments section">
         <div class="container">
-          <h2 class="section-title">Marcas que confiam na nossa operação</h2>
-
-          <div class="clients-marquee" aria-label="Carrossel de clientes">
-            <div class="clients-track">
-              <div class="client-logo" aria-label="Logo do cliente">Cliente</div>
-              <div class="client-logo" aria-label="Logo do cliente">Cliente</div>
-              <div class="client-logo" aria-label="Logo do cliente">Cliente</div>
-              <div class="client-logo" aria-label="Logo do cliente">Cliente</div>
-              <div class="client-logo" aria-label="Logo do cliente">Cliente</div>
-              <div class="client-logo" aria-label="Logo do cliente">Cliente</div>
-              <div class="client-logo" aria-label="Logo do cliente">Cliente</div>
-              <div class="client-logo" aria-label="Logo do cliente">Cliente</div>
-              <div class="client-logo" aria-label="Logo do cliente">Cliente</div>
-              <div class="client-logo" aria-label="Logo do cliente">Cliente</div>
-              <div class="client-logo" aria-label="Logo do cliente">Cliente</div>
-              <div class="client-logo" aria-label="Logo do cliente">Cliente</div>
-            </div>
-          </div>
+          <h2 class="section-title">Segmentos atendidos</h2>
+          <p class="section-subtitle">Operações com urgência, volume e cuidado diferentes. A mesma resposta rápida.</p>
+          <ul class="segments-grid">
+            <li data-observe><strong>Indústria</strong><span>Insumos, peças de manutenção e produto acabado.</span></li>
+            <li data-observe><strong>Varejo</strong><span>Reposição de lojas e transferência entre filiais.</span></li>
+            <li data-observe><strong>E-commerce</strong><span>Coleta no seu estoque e entrega ao cliente ou CD.</span></li>
+            <li data-observe><strong>Autopeças</strong><span>Entrega no mesmo dia para oficinas e concessionárias.</span></li>
+            <li data-observe><strong>Construção</strong><span>Material e equipamento direto na obra.</span></li>
+            <li data-observe><strong>Agronegócio</strong><span>Insumos e peças para fazendas e cooperativas.</span></li>
+          </ul>
         </div>
       </section>
     </main>
@@ -363,28 +382,24 @@
       <div class="container footer-inner">
         <address>
           <strong>JukMandioca Transportes</strong>
-          <p><a href="mailto:contato@jukmandioca.com.br">contato@jukmandioca.com.br</a></p>
-          <p><a href="tel:+551140000000">+55 (11) 4000-0000</a></p>
+          <p><a data-cfg="email" href="#"></a></p>
+          <p>WhatsApp: <a data-cfg="whatsapp-num" href="#" target="_blank" rel="noopener noreferrer"></a></p>
         </address>
         <div>
-          <p>Sede Operacional: Rua Exemplo, 123 — Distrito Industrial, Cidade/UF — CEP 00000-000</p>
-          <p>CNPJ: 12.345.678/0001-90</p>
+          <p data-cfg="endereco"></p>
+          <p data-cfg="horario"></p>
+          <p data-cfg="cnpj"></p>
           <a href="#topo" class="back-top">Voltar ao topo</a>
         </div>
       </div>
       <div class="container footer-legal">
-        <p>© 2025 JukMandioca Transportes. Todos os direitos reservados.</p>
-        <nav aria-label="Links legais">
-          <a href="privacidade.html">Política de Privacidade</a>
-          &nbsp;·&nbsp;
-          <a href="termos.html">Termos de Uso</a>
-        </nav>
+        <p>© <span data-cfg="ano">2026</span> JukMandioca Transportes. Todos os direitos reservados.</p>
       </div>
     </footer>
 
     <a
       class="whatsapp-float"
-      href="https://wa.me/551140000000"
+      href="#" data-wa=""
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Falar no WhatsApp"

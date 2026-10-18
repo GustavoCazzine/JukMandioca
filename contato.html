@@ -112,7 +112,7 @@
       <section class="hero hero-internal hero-contato">
         <div class="container hero-content">
           <h1>Solicite uma Cotação Estratégica</h1>
-          <p class="hero-subtitle">Envie os dados da sua demanda e receba retorno comercial consultivo.</p>
+          <p class="hero-subtitle">Preencha os dados da carga. A mensagem vai pronta para o nosso WhatsApp.</p>
         </div>
       </section>
 
@@ -121,14 +121,15 @@
           <div class="about-copy" data-observe>
             <h2>Fale com o nosso time comercial</h2>
             <address>
-              <p><strong>Telefone:</strong> <a href="tel:+551140000000">+55 (11) 4000-0000</a></p>
-              <p><strong>Telefone 2:</strong> <a href="tel:+551140001111">+55 (11) 4000-1111</a></p>
-              <p><strong>E-mail:</strong> <a href="mailto:comercial@jukmandioca.com.br">comercial@jukmandioca.com.br</a></p>
+              <p><strong>WhatsApp:</strong> <a data-cfg="whatsapp-num" href="#" target="_blank" rel="noopener noreferrer"></a></p>
+              <p><strong>Telefone:</strong> <a data-cfg="telefone" href="#"></a></p>
+              <p><strong>E-mail:</strong> <a data-cfg="email" href="#"></a></p>
+              <p><strong>Horário:</strong> <span data-cfg="horario"></span></p>
             </address>
             <figure class="card content-figure" style="margin-top: 1rem;">
               <iframe
                 title="Localização da sede operacional JukMandioca"
-                src="https://maps.google.com/maps?q=Sao%20Paulo&t=&z=11&ie=UTF8&iwloc=&output=embed"
+                src="https://maps.google.com/maps?q=Piracicaba%20SP&t=&z=11&ie=UTF8&iwloc=&output=embed"
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
               ></iframe>
@@ -141,7 +142,7 @@
             <p style="font-size:var(--text-sm);color:var(--color-muted);margin-bottom:.5rem;">
               Campos marcados com <span class="req" aria-hidden="true">*</span> são obrigatórios.
             </p>
-            <form id="contact-form" action="#" method="post" novalidate>
+            <form id="contact-form" data-quote-form novalidate>
               <div class="form-group">
                 <label for="empresa">Nome da Empresa<span class="req" aria-label="obrigatório">*</span></label>
                 <input id="empresa" name="empresa" type="text" autocomplete="organization" required />
@@ -173,11 +174,16 @@
                   <option value="lotacao">Lotação</option>
                   <option value="fracionada">Fracionada</option>
                   <option value="dedicada">Dedicada</option>
+                  <option value="expressa">Expressa (mesmo dia)</option>
                 </select>
               </div>
               <div class="form-group">
+                <label for="detalhes">Peso, volumes ou detalhes</label>
+                <textarea id="detalhes" name="detalhes" rows="3" placeholder="Ex.: 2 pallets, 600 kg, coleta amanhã às 9h"></textarea>
+              </div>
+              <div class="form-group">
                 <button type="submit" class="btn-primary">
-                  <span>Enviar Solicitação</span>
+                  <span>Enviar pelo WhatsApp</span>
                   <svg viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
@@ -193,27 +199,24 @@
       <div class="container footer-inner">
         <address>
           <strong>JukMandioca Transportes</strong>
-          <p><a href="mailto:contato@jukmandioca.com.br">contato@jukmandioca.com.br</a></p>
-          <p><a href="tel:+551140000000">+55 (11) 4000-0000</a></p>
+          <p><a data-cfg="email" href="#"></a></p>
+          <p>WhatsApp: <a data-cfg="whatsapp-num" href="#" target="_blank" rel="noopener noreferrer"></a></p>
         </address>
         <div>
-          <p>CNPJ: 12.345.678/0001-90</p>
+          <p data-cfg="endereco"></p>
+          <p data-cfg="horario"></p>
+          <p data-cfg="cnpj"></p>
           <a href="#topo" class="back-top">Voltar ao topo</a>
         </div>
       </div>
       <div class="container footer-legal">
-        <p>© 2025 JukMandioca Transportes. Todos os direitos reservados.</p>
-        <nav aria-label="Links legais">
-          <a href="privacidade.html">Política de Privacidade</a>
-          &nbsp;·&nbsp;
-          <a href="termos.html">Termos de Uso</a>
-        </nav>
+        <p>© <span data-cfg="ano">2026</span> JukMandioca Transportes. Todos os direitos reservados.</p>
       </div>
     </footer>
 
     <a
       class="whatsapp-float"
-      href="https://wa.me/551140000000"
+      href="#" data-wa=""
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Falar no WhatsApp"
