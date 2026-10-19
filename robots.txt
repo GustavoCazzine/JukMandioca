@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.jukmandioca.com.br/sitemap.xml
+Sitemap: https://juk-mandioca.vercel.app/sitemap.xml

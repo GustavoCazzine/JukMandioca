@@ -39,13 +39,14 @@ h1, h2, h3 { font-family: var(--font-display); }
 
 /* ─── Hero slider ─── */
 .hero-slider { position: relative; background: var(--color-black); overflow: hidden; height: clamp(460px, 62vw, 640px); }
-.hs-track { position: absolute; inset: 0; }
+.hs-track { position: absolute; inset: 0; z-index: 1; }
 .hs-slide { position: absolute; inset: 0; opacity: 0; visibility: hidden; transition: opacity .7s ease, visibility .7s; }
 .hs-slide.is-active { opacity: 1; visibility: visible; }
-.hs-img { position: absolute; inset: 0 0 0 auto; width: 78%; height: 100%; object-fit: cover; border-top-left-radius: 180px; filter: saturate(.85); }
-.hs-slide::after { content: ''; position: absolute; inset: 0 0 0 auto; width: 78%; border-top-left-radius: 180px; background: linear-gradient(90deg, rgba(17,17,17,.75), rgba(17,17,17,.15) 70%); }
-.hs-swoosh { position: absolute; left: -12%; top: -10%; width: 42%; height: 130%; background: var(--accent); border-radius: 0 100% 0 0 / 0 60% 0 0; transform: rotate(6deg); pointer-events: none; opacity: .95; clip-path: inset(0 0 0 0); }
-.hs-swoosh::after { content: ''; position: absolute; inset: 8% 6% 0 0; border-radius: inherit; background: var(--color-black); transform: translateX(-14%); }
+.hs-img { position: absolute; inset: 0 0 0 auto; width: 76%; height: 100%; object-fit: cover; border-top-left-radius: clamp(120px, 18vw, 260px); z-index: 1; }
+.hs-slide::after { content: ''; position: absolute; inset: 0 0 0 auto; width: 76%; border-top-left-radius: clamp(120px, 18vw, 260px); background: linear-gradient(90deg, rgba(17,17,17,.78), rgba(17,17,17,.1) 70%); z-index: 2; }
+.hs-swoosh { position: absolute; z-index: 0; top: 0; bottom: 0; right: 0; width: calc(76% + 22px); border-top-left-radius: clamp(130px, 19vw, 275px); background: var(--accent); pointer-events: none; }
+.hero-slider::before { content: ''; position: absolute; z-index: 0; top: 0; bottom: 0; right: 0; width: calc(76% + 44px); border-top-left-radius: clamp(140px, 20vw, 290px); background: #2a2a2a; pointer-events: none; }
+
 .hs-content { position: relative; z-index: 3; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: 2rem; padding-left: clamp(1rem, 22vw, 18rem); }
 .hs-title { margin: 0; display: flex; flex-direction: column; align-items: flex-start; gap: .35rem; font-family: var(--font-display); text-transform: uppercase; line-height: 1; }
 .hs-title .t { color: var(--color-white); font-weight: 600; font-size: clamp(2.2rem, 5vw, 4rem); }
@@ -58,7 +59,7 @@ h1, h2, h3 { font-family: var(--font-display); }
 @media (max-width: 760px) {
   .hs-img, .hs-slide::after { width: 100%; border-top-left-radius: 0; }
   .hs-slide::after { background: linear-gradient(180deg, rgba(17,17,17,.35), rgba(17,17,17,.85)); }
-  .hs-swoosh { display: none; }
+  .hs-swoosh, .hero-slider::before { display: none; }
   .hs-content { padding-left: 1rem; justify-content: flex-end; padding-bottom: 4rem; }
 }
 
@@ -164,3 +165,14 @@ h1, h2, h3 { font-family: var(--font-display); }
 .hero-frota { background-image: linear-gradient(120deg, rgba(17,17,17,.88), rgba(17,17,17,.55)), url('../img/lg-caminhao-frente.jpg'); background-position: center 35%; }
 .hero-contato { background-image: linear-gradient(120deg, rgba(17,17,17,.88), rgba(17,17,17,.55)), url('../img/lg-carga-empilhadeira.jpg'); background-position: center 50%; }
 .hs-img { object-position: center 45%; }
+.legal-body { max-width: 760px; }
+.legal-body h2 { font: 800 1.45rem/1.15 var(--font-display); text-transform: uppercase; color: var(--color-black); margin: 2rem 0 .6rem; }
+.legal-body p, .legal-body li { max-width: 68ch; }
+.legal-body ul { padding-left: 1.2rem; display: grid; gap: .4rem; }
+.legal-body a { color: var(--color-black); text-decoration: underline; text-decoration-color: var(--accent); text-underline-offset: 3px; }
+.legal-meta { font: 600 .9rem/1 var(--font-display); text-transform: uppercase; letter-spacing: .06em; color: #6b6b6b; }
+.footer-legal { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .8rem; }
+.legal-links { display: flex; flex-wrap: wrap; gap: 1.2rem; }
+.legal-links a { color: rgba(255,255,255,.75); font-size: .85rem; }
+.legal-links a:hover { color: var(--accent); }
+@media (max-width: 1100px) and (min-width: 901px) { .main-header .nav-list a { font-size: .95rem; } .nav-list { gap: 1rem; } }
