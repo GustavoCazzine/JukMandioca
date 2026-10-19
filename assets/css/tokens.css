@@ -1,13 +1,13 @@
-/* tokens.css — Fonte única de verdade do Design System JukMandioca.
+/* tokens.css — Fonte única de verdade do Design System Grupo LGvans.
    Edite os aliases semânticos no final para trocar o tema inteiro. */
 :root {
 
   /* ── Paleta base ── */
   --color-white:     #ffffff;
   --color-off-white: #f8f9fa;
-  --color-charcoal:  #2d3748;   /* cinza chumbo — texto corpo e UI escura */
-  --color-black:     #1a202c;   /* quase-preto — headings principais */
-  --color-yellow:    #f5b301;   /* amarelo industrial — CTA e destaque */
+  --color-charcoal:  #262626;   /* cinza chumbo — texto corpo e UI escura */
+  --color-black:     #111111;   /* quase-preto — headings principais */
+  --color-yellow:    #fdbe11;   /* amarelo industrial — CTA e destaque */
   --color-whatsapp:  #25d366;
   --color-error:     #e53e3e;   /* vermelho — campos inválidos e indicadores required */
 
@@ -31,8 +31,8 @@
   --overlay-white:     rgba(255,255,255, 0.90);
 
   /* ── Tipografia ── */
-  --font-sans:    'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-  --font-display: 'Montserrat', sans-serif;
+  --font-sans:    'Barlow', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  --font-display: 'Barlow Condensed', 'Arial Narrow', sans-serif;
 
   --text-xs:   0.68rem;    /*  ~11px */
   --text-sm:   0.875rem;   /*  ~14px */

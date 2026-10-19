@@ -23,22 +23,21 @@
     <meta name="twitter:description" content="Movimentação interna, estocagem de matéria-prima e transporte dedicado para indústrias no Estado de São Paulo. Desde 2004." />
 
     <!-- ─── PWA ─── -->
-    <meta name="theme-color" content="#f5b301" />
+    <meta name="theme-color" content="#111111" />
     <link rel="manifest" href="/site.webmanifest" />
 
     <!-- ─── Fontes: preconnect + preload não-bloqueante ─── -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preload" as="style"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@600;700;800&display=swap"
       onload="this.onload=null;this.rel='stylesheet'" />
     <noscript>
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@700;800&display=swap" />
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@600;700;800&display=swap" />
     </noscript>
 
     <!-- ─── Preload: hero background (LCP crítico) ─── -->
-    <link rel="preload" as="image" fetchpriority="high"
-      href="https://images.unsplash.com/photo-1494412519320-aa613dfb7738?auto=format&fit=crop&w=1920&q=80" />
+    
 
     <!-- ─── CSS ─── -->
     <link rel="stylesheet" href="assets/css/main.css" />
@@ -53,7 +52,7 @@
         <div class="container header-inner">
 
           <a href="index.html" class="logo" aria-label="Página inicial Grupo LGvans do Brasil">
-            <img src="assets/img/logo-lgvans.png" alt="Grupo LGvans – Transmandioca!" width="600" height="266" class="logo-img" />
+            <img src="assets/img/logo-lgvans-branco.png" alt="Grupo LGvans – Transmandioca!" width="600" height="266" class="logo-img" />
           </a>
 
           <button
@@ -84,156 +83,161 @@
     </header>
 
     <main>
-      <section class="hero">
-        <div class="container hero-content">
-          <p class="eyebrow">Intralogística dedicada · desde 2004</p>
-          <h1>
-            EFICIÊNCIA E <span class="highlight">ROBUSTEZ</span><br />
-            NA INTRALOGÍSTICA<br />
-            <span class="highlight">DA SUA INDÚSTRIA.</span>
-          </h1>
-          <p class="hero-subtitle">
-            O Grupo LGvans do Brasil assume a movimentação interna e a estocagem da sua matéria-prima com frota própria
-            e mão de obra qualificada. Operamos diretamente na sua planta, em qualquer cidade do Estado de São Paulo.
-          </p>
-          <a href="#" data-wa="Olá! Quero falar com um especialista logístico do Grupo LGvans." target="_blank" rel="noopener noreferrer" class="btn-primary">
-            <span>Falar com um Especialista Logístico</span>
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
+      <section class="hero-slider" aria-roledescription="carousel" aria-label="Destaques">
+        <div class="hs-track">
+          <div class="hs-slide is-active" role="group" aria-roledescription="slide" aria-label="Veículo dedicado">
+            <img class="hs-img" src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=1600&q=75" alt="" fetchpriority="high" />
+            <div class="container hs-content">
+              <h1 class="hs-title"><span class="t">PARA CADA</span><span class="b">OPERAÇÃO,</span><span class="t">UM VEÍCULO</span><span class="b">DEDICADO.</span></h1>
+              <a href="#servicos" class="pill-btn"><span class="pill-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M10 7l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Encontre o seu serviço</span></a>
+            </div>
+          </div>
+          <div class="hs-slide" role="group" aria-roledescription="slide" aria-label="Estoque Ativo">
+            <img class="hs-img" src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1600&q=75" alt="" loading="lazy" />
+            <div class="container hs-content">
+              <h1 class="hs-title"><span class="t">SEU ESTOQUE</span><span class="b">PERTO</span><span class="t">DA SUA</span><span class="b">PLANTA.</span></h1>
+              <a href="#servicos" class="pill-btn"><span class="pill-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M10 7l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Encontre o seu serviço</span></a>
+            </div>
+          </div>
+          <div class="hs-slide" role="group" aria-roledescription="slide" aria-label="Desde 2004">
+            <img class="hs-img" src="https://images.unsplash.com/photo-1616432043562-3671ea2e5242?auto=format&fit=crop&w=1600&q=75" alt="" loading="lazy" />
+            <div class="container hs-content">
+              <h1 class="hs-title"><span class="t">DESDE 2004</span><span class="b">MOVENDO</span><span class="t">A INDÚSTRIA</span><span class="b">DA REGIÃO.</span></h1>
+              <a href="#servicos" class="pill-btn"><span class="pill-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M10 7l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Encontre o seu serviço</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="hs-swoosh" aria-hidden="true"></div>
+        <div class="hs-dots" role="tablist" aria-label="Escolher destaque">
+          <button type="button" role="tab" aria-selected="true" aria-label="Destaque 1"></button>
+          <button type="button" role="tab" aria-selected="false" aria-label="Destaque 2"></button>
+          <button type="button" role="tab" aria-selected="false" aria-label="Destaque 3"></button>
         </div>
       </section>
 
-      <section class="quick-quote" aria-label="Solicitar proposta">
-        <div class="container">
-          <form class="quick-quote-form" data-quote-form novalidate>
-            <div class="qq-field">
-              <label for="qq-empresa">Empresa</label>
-              <input id="qq-empresa" name="empresa" type="text" placeholder="Nome da sua empresa" required />
-            </div>
-            <div class="qq-field">
-              <label for="qq-origem">Cidade da planta</label>
-              <input id="qq-origem" name="origem" type="text" placeholder="Ex.: Piracicaba" required />
-            </div>
-            <div class="qq-field">
-              <label for="qq-carga">Serviço</label>
-              <select id="qq-carga" name="carga">
-                <option>Caminhão dedicado</option>
-                <option>Fiorino dedicado</option>
-                <option>Van mista dedicada</option>
-                <option>Van carga dedicada</option>
-                <option>Estoque Ativo</option>
-                <option>Movimentação interna</option>
-              </select>
-            </div>
-            <button type="submit" class="btn-dark">
-              <span>Pedir proposta</span>
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-          </form>
-        </div>
-      </section>
-
-      <section id="sobre" class="about section">
-        <div class="container about-grid">
-          <figure class="about-visual" data-observe>
-            <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80" alt="Armazém com estoque organizado para abastecimento de linha" width="1200" height="800" loading="lazy" decoding="async" />
+      <section id="sobre" class="know section">
+        <div class="container know-grid">
+          <figure class="know-visual" data-observe>
+            <div class="know-frame"><img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=900&q=70" alt="Caminhão em operação de coleta" loading="lazy" decoding="async" /></div>
           </figure>
-          <article class="about-copy" data-observe>
-            <h2 class="section-title">O GRUPO LGVANS DO BRASIL</h2>
-            <p>
-              Somos parceiros estratégicos em transporte e movimentação dedicada interna. Entendemos que o fluxo de
-              materiais é o coração de uma operação de sucesso, por isso alocamos recursos, tecnologia e mão de obra
-              exclusivamente para a realidade de cada cliente.
-            </p>
-            <p>
-              Da descarga da matéria-prima ao abastecimento da linha de produção, da gestão de estoque à preparação
-              para a expedição: cuidamos da movimentação para que a sua empresa foque no que faz de melhor.
-            </p>
-            <div class="about-stats" aria-label="Indicadores">
-              <div class="about-stat" data-observe><strong>Desde 2004</strong><span>Atuando em logística dedicada</span></div>
-              <div class="about-stat" data-observe><strong>100% dedicado</strong><span>Veículo e equipe exclusivos para você</span></div>
+          <article class="know-copy" data-observe>
+            <h2 class="h-red">Conheça a LGvans</h2>
+            <p>A <b>LGvans</b> é uma transportadora <b>de Rio das Pedras – SP</b> especializada em <b>operação dedicada</b>: o veículo e o motorista ficam reservados só para a sua empresa.</p>
+            <p>Desde 2004 atendemos indústrias da região de Piracicaba com caminhões, vans e Fiorino, do frete expresso ao abastecimento diário de matéria-prima.</p>
+            <div class="know-stats">
+              <div class="kstat"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v3M17 3v3M4 8h16M5 5h14a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1z"/></svg><div><strong>2004</strong><span>no mercado</span></div></div>
+              <div class="kstat"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h11v9H3zM14 9h4l3 3v3h-7M7.5 18a1.5 1.5 0 1 0 0-.01M17.5 18a1.5 1.5 0 1 0 0-.01"/></svg><div><strong>4</strong><span>tipos de veículo dedicado</span></div></div>
+              <div class="kstat"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6-5.3-6-11a6 6 0 0 1 12 0c0 5.7-6 11-6 11z"/><circle cx="12" cy="10" r="2.2"/></svg><div><strong>SP</strong><span>atendimento em todo o estado</span></div></div>
             </div>
-            <div class="about-actions">
-              <a href="sobre.html" class="btn-primary"><span>CONHEÇA A EMPRESA</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-              <a href="frota.html" class="btn-primary"><span>FROTA DEDICADA</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            <div class="know-actions">
+              <a href="sobre.html" class="pill-btn"><span class="pill-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M10 7l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>História</span></a>
+              <a href="frota.html" class="pill-btn"><span class="pill-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M10 7l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Frota</span></a>
             </div>
           </article>
         </div>
       </section>
 
-      <section class="equipment section">
+      <section id="servicos" class="portfolio section">
         <div class="container">
-          <h2 class="section-title">Nossos pilares de atuação</h2>
-          <div class="pillars-grid">
-            <article class="pillar" data-observe><h3>Frota própria e moderna</h3><p>Você não precisa investir em ativos. Fornecemos os veículos e equipamentos ideais para a sua operação.</p></article>
-            <article class="pillar" data-observe><h3>Mão de obra especializada</h3><p>Profissionais treinados e certificados (NR-11 e NR-12). Cuidamos da gestão da equipe, encargos e substituições sem parar sua produção.</p></article>
-            <article class="pillar" data-observe><h3>Operação in-house personalizada</h3><p>Atuamos dentro da sua planta, adaptando nossos processos à cultura e às normas de segurança da sua empresa.</p></article>
+          <div class="pf-head">
+            <h2 class="h-red">Portfólio de serviços</h2>
+            <div class="pf-arrows">
+              <button type="button" class="pf-prev" aria-label="Serviço anterior"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 7l-5 5 5 5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+              <button type="button" class="pf-next" aria-label="Próximo serviço"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 7l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            </div>
           </div>
         </div>
+        <div class="pf-track" tabindex="0" aria-label="Serviços">
+            <article class="pf-card">
+              <div class="pf-media"><img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=900&q=70" alt="" loading="lazy" decoding="async" /><span class="pf-tag">Toco · Truck</span></div>
+              <div class="pf-body"><h3>Caminhão dedicado</h3><p>Escolhemos a configuração de caminhão certa para a sua movimentação, com motorista à disposição durante todo o contrato.</p></div>
+            </article>
+            <article class="pf-card">
+              <div class="pf-media"><img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=900&q=70" alt="" loading="lazy" decoding="async" /><span class="pf-tag">Utilitário</span></div>
+              <div class="pf-body"><h3>Fiorino dedicado</h3><p>Coletas rápidas de peças e materiais de produção, manutenção ou escritório, sem esperar rota.</p></div>
+            </article>
+            <article class="pf-card">
+              <div class="pf-media"><img src="https://images.unsplash.com/photo-1616432043562-3671ea2e5242?auto=format&fit=crop&w=900&q=70" alt="" loading="lazy" decoding="async" /><span class="pf-tag">6 lugares + 500 kg</span></div>
+              <div class="pf-body"><h3>Van mista</h3><p>Leva e traz de funcionários entre unidades e pequenas cargas na mesma viagem.</p></div>
+            </article>
+            <article class="pf-card">
+              <div class="pf-media"><img src="https://images.unsplash.com/photo-1494412519320-aa613dfb7738?auto=format&fit=crop&w=900&q=70" alt="" loading="lazy" decoding="async" /><span class="pf-tag">Furgão</span></div>
+              <div class="pf-body"><h3>Van carga</h3><p>Furgão fechado para cargas leves que precisam sair na hora.</p></div>
+            </article>
+            <article class="pf-card">
+              <div class="pf-media"><img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=900&q=70" alt="" loading="lazy" decoding="async" /><span class="pf-tag">Armazém + entrega</span></div>
+              <div class="pf-body"><h3>Estoque Ativo</h3><p>Sua matéria-prima guardada em armazém perto da planta e entregue sempre que você pedir.</p></div>
+            </article>
+            <article class="pf-card">
+              <div class="pf-media"><img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=900&q=70" alt="" loading="lazy" decoding="async" /><span class="pf-tag">Urgente</span></div>
+              <div class="pf-body"><h3>Expresso no mesmo dia</h3><p>Pediu em horário comercial, o veículo sai no mesmo dia.</p></div>
+            </article>
+        </div>
       </section>
 
-      <section id="servicos" class="services section">
-        <div class="container">
-          <h2 class="section-title">Serviços especializados</h2>
-          <p class="section-subtitle">Soluções sob medida para o fluxo interno de materiais da sua indústria.</p>
-          <div class="services-grid">
-            <article class="card service-card" data-observe>
-              <div class="service-media"><img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80" alt="Recebimento e movimentação de matéria-prima" width="1200" height="800" loading="lazy" decoding="async" /></div>
-              <div class="service-body"><h3>Movimentação de matéria-prima</h3><p>Fluxo ágil e seguro desde o recebimento e a descarga até o abastecimento contínuo das linhas de produção.</p></div>
-            </article>
-            <article class="card service-card" data-observe>
-              <div class="service-media"><img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=1200&q=80" alt="Estoque organizado em armazém" width="1200" height="800" loading="lazy" decoding="async" /></div>
-              <div class="service-body"><h3>Estocagem e almoxarifado</h3><p>Organização estratégica de estoques, inventários precisos e preservação da integridade dos insumos industriais.</p></div>
-            </article>
-            <article class="card service-card" data-observe>
-              <div class="service-media"><img src="https://images.unsplash.com/photo-1616432043562-3671ea2e5242?auto=format&fit=crop&w=1200&q=80" alt="Veículo dedicado em operação" width="1200" height="800" loading="lazy" decoding="async" /></div>
-              <div class="service-body"><h3>Outsourcing logístico completo</h3><p>Gestão de ponta a ponta da intralogística, para que a sua indústria foque exclusivamente no core business.</p></div>
-            </article>
+      <section class="ativo section">
+        <div class="container ativo-grid">
+          <div class="ativo-copy" data-observe>
+            <span class="kicker">Estoque Ativo</span>
+            <h2>Como se o estoque estivesse dentro da sua empresa</h2>
+            <p>Você libera espaço na fábrica. A gente guarda os insumos num armazém próximo e leva o que a produção precisar, dentro dos horários combinados.</p>
           </div>
-        </div>
-      </section>
-
-      <section class="compliance-band section">
-        <div class="container">
-          <h2>Estoque Ativo: como se o estoque estivesse dentro da sua empresa</h2>
-          <p>
-            Guardamos sua matéria-prima e insumos em armazém próximo da sua planta, com operador, empilhadeira e caminhão
-            com motorista para levar e trazer o que precisar, dentro dos horários combinados. Você libera espaço e a produção não para.
-          </p>
-        </div>
-      </section>
-
-      <section id="como-funciona" class="segments section">
-        <div class="container">
-          <h2 class="section-title">Como funciona o Estoque Ativo</h2>
-          <ol class="steps-grid">
-            <li data-observe><strong>Você solicita</strong><span>Por e-mail ou WhatsApp, informando o material ou o lote.</span></li>
-            <li data-observe><strong>Separamos no armazém</strong><span>Nosso operador localiza e separa com empilhadeira.</span></li>
-            <li data-observe><strong>Levamos até a linha</strong><span>Caminhão dedicado entrega na sua planta com agilidade e segurança.</span></li>
-            <li data-observe><strong>Estoque em tempo real</strong><span>Movimentação registrada e saldo sempre atualizado.</span></li>
+          <ol class="ativo-steps" data-observe>
+            <li><b>Você pede</b><span>Por e-mail ou WhatsApp, o material ou o lote.</span></li>
+            <li><b>Separamos</b><span>No armazém, com operador e empilhadeira.</span></li>
+            <li><b>Entregamos</b><span>Caminhão com motorista leva até a sua empresa.</span></li>
           </ol>
         </div>
       </section>
 
-      <section class="aggregates section">
-        <div class="container aggregates-grid">
-          <article class="aggregates-copy" data-observe>
-            <h2 class="section-title">Segurança em primeiro lugar</h2>
-            <p>Zero acidentes é a nossa meta constante, com treinamentos contínuos e monitoramento rigoroso.</p>
-            <ul class="check-list">
-              <li>Carga com seguro</li>
-              <li>Rastreamento em todos os veículos</li>
-              <li>Emissão de nota fiscal e CT-e</li>
-              <li>Equipe com NR-11 e NR-12</li>
-            </ul>
-            <a href="#" data-wa="Olá! Tenho veículo próprio e quero ser agregado do Grupo LGvans." target="_blank" rel="noopener noreferrer" class="btn-primary">
-              <span>Seja um agregado</span>
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
-          </article>
-          <figure class="aggregates-visual" data-observe>
-            <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1200&q=80" alt="Caminhão dedicado em operação" width="1200" height="800" loading="lazy" decoding="async" />
+      <section id="clientes" class="clients section">
+        <div class="container">
+          <h2 class="h-red">Quem confia na LGvans</h2>
+          <p class="section-subtitle">Indústrias que contam com a nossa operação dedicada.</p>
+        </div>
+        <div class="cl-marquee" aria-label="Clientes">
+          <div class="cl-track">
+            <span class="cl-item"><b>PHA</b><small>Piracicaba Hose Facility</small></span>
+            <span class="cl-item"><b>Cat Reman</b><small>Remanufatura · Piracicaba</small></span>
+            <span class="cl-item"><b>PHA</b><small>Piracicaba Hose Facility</small></span>
+            <span class="cl-item"><b>Cat Reman</b><small>Remanufatura · Piracicaba</small></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="trust section">
+        <div class="container trust-grid">
+          <div class="trust-item" data-observe><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg><div><b>Carga com seguro</b><span>Toda movimentação coberta.</span></div></div>
+          <div class="trust-item" data-observe><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><path d="M12 4v4"/></svg><div><b>Frota rastreada</b><span>Rastreador em todos os veículos.</span></div></div>
+          <div class="trust-item" data-observe><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4M10 12h5M10 16h5"/></svg><div><b>NF e CT-e</b><span>Documentação fiscal em dia.</span></div></div>
+        </div>
+      </section>
+
+      <section class="people section">
+        <div class="container people-grid">
+          <figure class="people-visual" data-observe>
+            <span class="slab s1" aria-hidden="true"></span><span class="slab s2" aria-hidden="true"></span>
+            <img src="https://images.unsplash.com/photo-1616432043562-3671ea2e5242?auto=format&fit=crop&w=900&q=70" alt="Veículos prontos para operação" loading="lazy" decoding="async" />
           </figure>
+          <article class="people-copy" data-observe>
+            <h2 class="h-red">Seja um agregado</h2>
+            <p>Tem caminhão, van ou Fiorino? Trabalhe com a gente em operações contínuas, com rota e pagamento combinados antes.</p>
+            <a href="#" data-wa="Olá! Tenho veículo próprio e quero ser agregado do Grupo LGvans." target="_blank" rel="noopener noreferrer" class="pill-btn"><span class="pill-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M10 7l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Cadastrar meu veículo</span></a>
+          </article>
+        </div>
+      </section>
+
+      <section class="final-cta">
+        <div class="container final-inner">
+          <h2>Qual veículo a sua operação precisa?</h2>
+          <form class="quick-quote-form" data-quote-form novalidate>
+            <div class="qq-field"><label for="qq-empresa">Empresa</label><input id="qq-empresa" name="empresa" type="text" placeholder="Nome da empresa" required /></div>
+            <div class="qq-field"><label for="qq-origem">Cidade</label><input id="qq-origem" name="origem" type="text" placeholder="Ex.: Piracicaba" required /></div>
+            <div class="qq-field"><label for="qq-carga">Serviço</label>
+              <select id="qq-carga" name="carga"><option>Caminhão dedicado</option><option>Fiorino dedicado</option><option>Van mista</option><option>Van carga</option><option>Estoque Ativo</option><option>Expresso no mesmo dia</option></select>
+            </div>
+            <button type="submit" class="btn-dark"><span>Pedir proposta</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          </form>
         </div>
       </section>
     </main>
