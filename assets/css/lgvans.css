@@ -160,3 +160,7 @@ h1, h2, h3 { font-family: var(--font-display); }
 .final-cta .pill-btn .pill-ico { background: var(--accent); color: var(--color-black); }
 .hero-internal h1 { font-family: var(--font-display); font-weight: 800; }
 .pillar h3 { font-family: var(--font-display); }
+.hero-sobre { background-image: linear-gradient(120deg, rgba(17,17,17,.88), rgba(17,17,17,.55)), url('../img/lg-pallets-carregamento.jpg'); background-position: center 40%; }
+.hero-frota { background-image: linear-gradient(120deg, rgba(17,17,17,.88), rgba(17,17,17,.55)), url('../img/lg-caminhao-frente.jpg'); background-position: center 35%; }
+.hero-contato { background-image: linear-gradient(120deg, rgba(17,17,17,.88), rgba(17,17,17,.55)), url('../img/lg-carga-empilhadeira.jpg'); background-position: center 50%; }
+.hs-img { object-position: center 45%; }
