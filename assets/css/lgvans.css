@@ -163,7 +163,7 @@ h1, h2, h3 { font-family: var(--font-display); }
 .pillar h3 { font-family: var(--font-display); }
 .hero-sobre { background-image: linear-gradient(120deg, rgba(17,17,17,.88), rgba(17,17,17,.55)), url('../img/lg-pallets-carregamento.jpg'); background-position: center 40%; }
 .hero-frota { background-image: linear-gradient(120deg, rgba(17,17,17,.88), rgba(17,17,17,.55)), url('../img/lg-caminhao-frente.jpg'); background-position: center 35%; }
-.hero-contato { background-image: linear-gradient(120deg, rgba(17,17,17,.88), rgba(17,17,17,.55)), url('../img/lg-carga-empilhadeira.jpg'); background-position: center 50%; }
+.hero-contato { background-image: linear-gradient(120deg, rgba(17,17,17,.88), rgba(17,17,17,.55)), url('../img/ai-contato.jpg'); background-position: center 40%; }
 .hs-img { object-position: center 45%; }
 .legal-body { max-width: 760px; }
 .legal-body h2 { font: 800 1.45rem/1.15 var(--font-display); text-transform: uppercase; color: var(--color-black); margin: 2rem 0 .6rem; }
@@ -176,3 +176,5 @@ h1, h2, h3 { font-family: var(--font-display); }
 .legal-links a { color: rgba(255,255,255,.75); font-size: .85rem; }
 .legal-links a:hover { color: var(--accent); }
 @media (max-width: 1100px) and (min-width: 901px) { .main-header .nav-list a { font-size: .95rem; } .nav-list { gap: 1rem; } }
+
+.hero-sust { background-image: linear-gradient(120deg, rgba(17,17,17,.85), rgba(17,17,17,.45)), url('../img/ai-sustentabilidade.jpg'); background-position: center 55%; background-size: cover; }
