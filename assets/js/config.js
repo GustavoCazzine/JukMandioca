@@ -1,11 +1,11 @@
 export const EMPRESA = {
-  nome: 'JukMandioca Transportes',
-  whatsapp: '5519900000000',
-  telefone: '5519900000000',
-  email: 'contato@jukmandioca.com.br',
-  cnpj: '00.000.000/0001-00',
-  endereco: 'Piracicaba – SP',
-  horario: 'Seg. a sex. 8h–18h · Sáb. 8h–12h',
+  nome: 'Grupo LGvans do Brasil',
+  whatsapp: '5519996027307',
+  telefone: '5519996027307',
+  email: '',
+  cnpj: '06.971.892/0001-54',
+  endereco: 'Rio das Pedras – SP · Região de Piracicaba',
+  horario: 'Atendimento das 7h às 17h',
 };
 
 const fmtTel = n => {
@@ -27,5 +27,5 @@ export function initConfig() {
   set('[data-cfg="endereco"]', el => { el.textContent = EMPRESA.endereco; });
   set('[data-cfg="horario"]', el => { el.textContent = EMPRESA.horario; });
   set('[data-cfg="ano"]', el => { el.textContent = new Date().getFullYear(); });
-  set('[data-wa]', el => { el.href = waLink(el.dataset.wa || 'Olá! Quero uma cotação de frete.'); });
+  set('[data-wa]', el => { el.href = waLink(el.dataset.wa || 'Olá! Quero falar com um especialista logístico do Grupo LGvans.'); });
 }

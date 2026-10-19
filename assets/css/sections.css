@@ -592,3 +592,59 @@
 
 @media (max-width: 900px) { .segments-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 520px) { .segments-grid { grid-template-columns: 1fr; } }
+
+/* ─── Marca Grupo LGvans ─── */
+.main-header { background: var(--color-white); border-bottom: 4px solid var(--accent); }
+.logo-img { display: block; height: 52px; width: auto; }
+.footer-logo { display: block; width: 180px; height: auto; margin-bottom: var(--space-3); }
+@media (max-width: 520px) { .logo-img { height: 42px; } }
+
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-4);
+}
+.pillars-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.pillar {
+  background: var(--bg-surface);
+  border: 1px solid var(--color-border);
+  border-left: 5px solid var(--accent);
+  padding: var(--space-5) var(--space-6);
+}
+.pillar h3 { margin: 0 0 .4rem; font: 800 var(--text-lg)/1.25 var(--font-display); color: var(--color-black); }
+.pillar p { margin: 0; color: var(--color-charcoal); }
+
+.steps-grid {
+  list-style: none; margin: 0; padding: 0; counter-reset: step;
+  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--space-4);
+}
+.steps-grid li {
+  counter-increment: step; display: grid; gap: .35rem; padding: var(--space-5);
+  background: var(--bg-surface); border: 1px solid var(--color-border); border-top: 4px solid var(--accent);
+}
+.steps-grid li::before {
+  content: counter(step); display: grid; place-items: center; width: 2.2rem; height: 2.2rem; border-radius: 50%;
+  background: var(--color-charcoal); color: var(--accent); font: 800 1rem/1 var(--font-display);
+}
+.steps-grid strong { font: 800 var(--text-lg)/1.2 var(--font-display); color: var(--color-black); }
+.steps-grid span { color: var(--color-charcoal); font-size: var(--text-sm); }
+
+.check-list { list-style: none; margin: var(--space-4) 0 var(--space-6); padding: 0; display: grid; gap: .55rem; }
+.check-list li { display: flex; gap: .6rem; align-items: baseline; color: var(--color-charcoal); font-weight: 500; }
+.check-list li::before { content: '✓'; color: var(--color-charcoal); background: var(--accent); border-radius: 50%; width: 1.4rem; height: 1.4rem; display: inline-grid; place-items: center; font-weight: 800; font-size: .8rem; flex: none; }
+
+.fleet-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--space-4); }
+.fleet-card {
+  display: flex; flex-direction: column; gap: .5rem; padding: var(--space-6);
+  background: var(--color-charcoal); color: var(--color-white); border-bottom: 5px solid var(--accent); min-width: 0;
+}
+.fleet-card h3 { margin: 0; font: 800 var(--text-2xl)/1.1 var(--font-display); color: var(--color-white); }
+.fleet-card p { margin: 0; color: rgba(255,255,255,.85); }
+.fleet-card .fleet-spec { margin-top: auto; padding-top: .6rem; font-weight: 600; color: var(--accent); }
+.fleet-tag { align-self: flex-start; background: var(--accent); color: var(--color-black); font: 800 var(--text-xs)/1 var(--font-display); letter-spacing: .08em; text-transform: uppercase; padding: .35rem .6rem; }
+
+@media (max-width: 1000px) { .fleet-grid, .steps-grid, .pillars-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 768px) { .pillars-grid { grid-template-columns: 1fr; } }
+@media (max-width: 520px) { .fleet-grid, .steps-grid, .pillars-4 { grid-template-columns: 1fr; } }
+.hero .eyebrow { color: var(--accent); background: rgba(245, 179, 1, 0.14); border: 1px solid rgba(245, 179, 1, 0.45); letter-spacing: .04em; }
+.hero h1 { max-width: 24ch; }

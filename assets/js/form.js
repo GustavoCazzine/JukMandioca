@@ -19,10 +19,10 @@ const label = el => el.selectedOptions ? el.selectedOptions[0].text : el.value;
 
 function quoteMessage(f) {
   const linhas = [['Empresa', 'empresa'], ['CNPJ', 'cnpj'], ['E-mail', 'email'], ['Telefone', 'telefone'],
-    ['Origem', 'origem'], ['Destino', 'destino'], ['Carga', 'carga'], ['Detalhes', 'detalhes']]
+    ['Cidade da planta', 'origem'], ['Destino', 'destino'], ['Serviço', 'carga'], ['Detalhes', 'detalhes']]
     .filter(([, n]) => f.elements[n] && val(f, n))
     .map(([t, n]) => `${t}: ${label(f.elements[n])}`);
-  return `Olá! Quero uma cotação de frete.\n${linhas.join('\n')}`;
+  return `Olá! Quero uma proposta do Grupo LGvans.\n${linhas.join('\n')}`;
 }
 
 function showError(f, msg) {
