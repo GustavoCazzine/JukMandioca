@@ -24,26 +24,26 @@
 
     <!-- ─── PWA ─── -->
     <meta name="theme-color" content="#111111" />
-    <link rel="manifest" href="/site.webmanifest" />
-
-    <!-- ─── Fontes: preconnect + preload não-bloqueante ─── -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preload" as="style"
-      href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@600;700;800&display=swap"
-      onload="this.onload=null;this.rel='stylesheet'" />
-    <noscript>
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@600;700;800&display=swap" />
-    </noscript>
-
-    <!-- ─── Preload: hero background (LCP crítico) ─── -->
-    
-
-    <!-- ─── CSS ─── -->
-    <link rel="stylesheet" href="assets/css/main.css" />
-
-    <!-- ─── JSON-LD: Organization + LocalBusiness + WebSite ─── -->
+    <link rel="manifest" href="/site.webmanifest" /><!-- ─── CSS ─── -->
+    <link rel="stylesheet" href="assets/css/site.min.css" />
+    <link rel="preload" href="assets/fonts/barlow-condensed-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="assets/fonts/barlow-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" as="image" href="assets/img/ai-hero-1-1024.webp" imagesrcset="assets/img/ai-hero-1-480.webp 480w, assets/img/ai-hero-1-960.webp 960w, assets/img/ai-hero-1-1024.webp 1024w" imagesizes="(max-width: 760px) 100vw, 76vw" fetchpriority="high" />
+    <link rel="canonical" href="https://juk-mandioca.vercel.app/" />
+    <meta property="og:url" content="https://juk-mandioca.vercel.app/" />
+    <meta property="og:image" content="https://juk-mandioca.vercel.app/assets/img/og-cover.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:image" content="https://juk-mandioca.vercel.app/assets/img/og-cover.jpg" />
+    <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://juk-mandioca.vercel.app/#org", "name": "Grupo LGvans do Brasil", "legalName": "LG Locação Transporte e Logística Ltda.", "taxID": "06.971.892/0001-54", "url": "https://juk-mandioca.vercel.app/", "logo": "https://juk-mandioca.vercel.app/assets/img/logo-lgvans.png", "foundingDate": "2004", "contactPoint": {"@type": "ContactPoint", "telephone": "+55-19-99602-7307", "contactType": "sales", "areaServed": "BR-SP", "availableLanguage": "Portuguese"}}, {"@type": "LocalBusiness", "@id": "https://juk-mandioca.vercel.app/#business", "name": "Grupo LGvans do Brasil", "image": "https://juk-mandioca.vercel.app/assets/img/og-cover.jpg", "url": "https://juk-mandioca.vercel.app/", "telephone": "+55-19-99602-7307", "priceRange": "$$", "address": {"@type": "PostalAddress", "addressLocality": "Rio das Pedras", "addressRegion": "SP", "addressCountry": "BR"}, "areaServed": [{"@type": "State", "name": "São Paulo"}, {"@type": "City", "name": "Piracicaba"}], "openingHoursSpecification": {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "07:00", "closes": "17:00"}, "parentOrganization": {"@id": "https://juk-mandioca.vercel.app/#org"}, "makesOffer": [{"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Caminhão dedicado com motorista"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Fiorino dedicado"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Van mista dedicada"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Van carga dedicada"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Estoque Ativo (armazenagem e entrega)"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Frete expresso no mesmo dia"}}]}, {"@type": "WebSite", "@id": "https://juk-mandioca.vercel.app/#site", "url": "https://juk-mandioca.vercel.app/", "name": "Grupo LGvans do Brasil", "inLanguage": "pt-BR", "publisher": {"@id": "https://juk-mandioca.vercel.app/#org"}}]}</script>
+    <link rel="preload" href="assets/fonts/barlow-condensed-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="assets/fonts/barlow-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="assets/fonts/barlow-condensed-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="assets/fonts/barlow-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="assets/fonts/barlow-condensed-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="assets/fonts/barlow-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
       <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+    <link rel="apple-touch-icon" href="assets/img/icon-192.png" />
   </head>
   <body id="topo">
 
@@ -52,7 +52,7 @@
         <div class="container header-inner">
 
           <a href="index.html" class="logo" aria-label="Página inicial Grupo LGvans do Brasil">
-            <img src="assets/img/logo-lgvans-branco.png" alt="Grupo LGvans – Transmandioca!" width="600" height="266" class="logo-img" />
+            <img src="assets/img/logo-lgvans-branco-300.webp" srcset="assets/img/logo-lgvans-branco-300.webp 300w, assets/img/logo-lgvans-branco-600.webp 600w" sizes="150px" srcset="assets/img/logo-lgvans-branco-300.webp 300w, assets/img/logo-lgvans-branco-600.webp 600w" sizes="150px" srcset="assets/img/logo-lgvans-branco-300.webp 300w, assets/img/logo-lgvans-branco-600.webp 600w" sizes="150px" srcset="assets/img/logo-lgvans-branco-300.webp 300w, assets/img/logo-lgvans-branco-600.webp 600w" sizes="150px" alt="Grupo LGvans – Transmandioca!" width="300" height="133" class="logo-img" />
           </a>
 
           <button
@@ -88,23 +88,23 @@
         <div class="hs-swoosh" aria-hidden="true"></div>
         <div class="hs-track">
           <div class="hs-slide is-active" role="group" aria-roledescription="slide" aria-label="Veículo dedicado">
-            <img class="hs-img" src="assets/img/ai-hero-1.jpg" alt="" fetchpriority="high" />
+            <img fetchpriority="high" src="assets/img/ai-hero-1-1024.webp" srcset="assets/img/ai-hero-1-480.webp 480w, assets/img/ai-hero-1-960.webp 960w, assets/img/ai-hero-1-1024.webp 1024w" sizes="(max-width: 760px) 100vw, 76vw" width="1024" height="572" class="hs-img" alt="" />
             <div class="container hs-content">
               <h1 class="hs-title"><span class="t">PARA CADA</span><span class="b">OPERAÇÃO,</span><span class="t">UM VEÍCULO</span><span class="b">DEDICADO.</span></h1>
               <a href="#servicos" class="pill-btn"><span class="pill-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M10 7l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Encontre o seu serviço</span></a>
             </div>
           </div>
           <div class="hs-slide" role="group" aria-roledescription="slide" aria-label="Estoque Ativo">
-            <img class="hs-img" src="assets/img/ai-hero-2.jpg" alt="" loading="lazy" />
+            <img loading="lazy" decoding="async" src="assets/img/ai-hero-2-1024.webp" srcset="assets/img/ai-hero-2-480.webp 480w, assets/img/ai-hero-2-960.webp 960w, assets/img/ai-hero-2-1024.webp 1024w" sizes="(max-width: 760px) 100vw, 76vw" width="1024" height="572" class="hs-img" alt="" />
             <div class="container hs-content">
-              <h1 class="hs-title"><span class="t">SEU ESTOQUE</span><span class="b">PERTO</span><span class="t">DA SUA</span><span class="b">PLANTA.</span></h1>
+              <p class="hs-title"><span class="t">SEU ESTOQUE</span><span class="b">PERTO</span><span class="t">DA SUA</span><span class="b">PLANTA.</span></p>
               <a href="#servicos" class="pill-btn"><span class="pill-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M10 7l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Encontre o seu serviço</span></a>
             </div>
           </div>
           <div class="hs-slide" role="group" aria-roledescription="slide" aria-label="Desde 2004">
-            <img class="hs-img" src="assets/img/ai-hero-3.jpg" alt="" loading="lazy" />
+            <img loading="lazy" decoding="async" src="assets/img/ai-hero-3-1024.webp" srcset="assets/img/ai-hero-3-480.webp 480w, assets/img/ai-hero-3-960.webp 960w, assets/img/ai-hero-3-1024.webp 1024w" sizes="(max-width: 760px) 100vw, 76vw" width="1024" height="572" class="hs-img" alt="" />
             <div class="container hs-content">
-              <h1 class="hs-title"><span class="t">DESDE 2004</span><span class="b">MOVENDO</span><span class="t">A INDÚSTRIA</span><span class="b">DA REGIÃO.</span></h1>
+              <p class="hs-title"><span class="t">DESDE 2004</span><span class="b">MOVENDO</span><span class="t">A INDÚSTRIA</span><span class="b">DA REGIÃO.</span></p>
               <a href="#servicos" class="pill-btn"><span class="pill-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M10 7l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Encontre o seu serviço</span></a>
             </div>
           </div>
@@ -119,7 +119,7 @@
       <section id="sobre" class="know section">
         <div class="container know-grid">
           <figure class="know-visual" data-observe>
-            <div class="know-frame"><img src="assets/img/lg-carga-empilhadeira.jpg" alt="Caminhão da LGvans sendo carregado com empilhadeira" loading="lazy" decoding="async" /></div>
+            <div class="know-frame"><img src="assets/img/lg-carga-empilhadeira-899.webp" srcset="assets/img/lg-carga-empilhadeira-480.webp 480w, assets/img/lg-carga-empilhadeira-899.webp 899w" sizes="(max-width: 760px) 92vw, 420px" width="899" height="900" alt="Caminhão da LGvans sendo carregado com empilhadeira" loading="lazy" decoding="async" /></div>
           </figure>
           <article class="know-copy" data-observe>
             <h2 class="h-red">Conheça a LGvans</h2>
@@ -150,27 +150,27 @@
         </div>
         <div class="pf-track" tabindex="0" aria-label="Serviços">
             <article class="pf-card">
-              <div class="pf-media"><img src="assets/img/lg-caminhao-frente.jpg" alt="" loading="lazy" decoding="async" /><span class="pf-tag">Toco · Truck</span></div>
+              <div class="pf-media"><img src="assets/img/lg-caminhao-frente-960.webp" srcset="assets/img/lg-caminhao-frente-480.webp 480w, assets/img/lg-caminhao-frente-960.webp 960w, assets/img/lg-caminhao-frente-1200.webp 1200w" sizes="(max-width: 760px) 92vw, 420px" width="960" height="640" alt="" loading="lazy" decoding="async" /><span class="pf-tag">Toco · Truck</span></div>
               <div class="pf-body"><h3>Caminhão dedicado</h3><p>Escolhemos a configuração de caminhão certa para a sua movimentação, com motorista à disposição durante todo o contrato.</p></div>
             </article>
             <article class="pf-card">
-              <div class="pf-media"><img src="assets/img/ai-fiorino.jpg" alt="" loading="lazy" decoding="async" /><span class="pf-tag">Utilitário</span></div>
+              <div class="pf-media"><img src="assets/img/ai-fiorino-960.webp" srcset="assets/img/ai-fiorino-480.webp 480w, assets/img/ai-fiorino-960.webp 960w, assets/img/ai-fiorino-1024.webp 1024w" sizes="(max-width: 760px) 92vw, 420px" width="960" height="536" alt="" loading="lazy" decoding="async" /><span class="pf-tag">Utilitário</span></div>
               <div class="pf-body"><h3>Fiorino dedicado</h3><p>Coletas rápidas de peças e materiais de produção, manutenção ou escritório, sem esperar rota.</p></div>
             </article>
             <article class="pf-card">
-              <div class="pf-media"><img src="assets/img/ai-van-mista.jpg" alt="" loading="lazy" decoding="async" /><span class="pf-tag">6 lugares + 500 kg</span></div>
+              <div class="pf-media"><img src="assets/img/ai-van-mista-960.webp" srcset="assets/img/ai-van-mista-480.webp 480w, assets/img/ai-van-mista-960.webp 960w, assets/img/ai-van-mista-1024.webp 1024w" sizes="(max-width: 760px) 92vw, 420px" width="960" height="536" alt="" loading="lazy" decoding="async" /><span class="pf-tag">6 lugares + 500 kg</span></div>
               <div class="pf-body"><h3>Van mista</h3><p>Leva e traz de funcionários entre unidades e pequenas cargas na mesma viagem.</p></div>
             </article>
             <article class="pf-card">
-              <div class="pf-media"><img src="assets/img/ai-van-carga.jpg" alt="" loading="lazy" decoding="async" /><span class="pf-tag">Furgão</span></div>
+              <div class="pf-media"><img src="assets/img/ai-van-carga-960.webp" srcset="assets/img/ai-van-carga-480.webp 480w, assets/img/ai-van-carga-960.webp 960w, assets/img/ai-van-carga-1024.webp 1024w" sizes="(max-width: 760px) 92vw, 420px" width="960" height="536" alt="" loading="lazy" decoding="async" /><span class="pf-tag">Furgão</span></div>
               <div class="pf-body"><h3>Van carga</h3><p>Furgão fechado para cargas leves que precisam sair na hora.</p></div>
             </article>
             <article class="pf-card">
-              <div class="pf-media"><img src="assets/img/ai-estoque.jpg" alt="" loading="lazy" decoding="async" /><span class="pf-tag">Armazém + entrega</span></div>
+              <div class="pf-media"><img src="assets/img/ai-estoque-960.webp" srcset="assets/img/ai-estoque-480.webp 480w, assets/img/ai-estoque-960.webp 960w, assets/img/ai-estoque-1024.webp 1024w" sizes="(max-width: 760px) 92vw, 420px" width="960" height="536" alt="" loading="lazy" decoding="async" /><span class="pf-tag">Armazém + entrega</span></div>
               <div class="pf-body"><h3>Estoque Ativo</h3><p>Sua matéria-prima guardada em armazém perto da planta e entregue sempre que você pedir.</p></div>
             </article>
             <article class="pf-card">
-              <div class="pf-media"><img src="assets/img/lg-pallets-carregamento.jpg" alt="" loading="lazy" decoding="async" /><span class="pf-tag">Urgente</span></div>
+              <div class="pf-media"><img src="assets/img/lg-pallets-carregamento-960.webp" srcset="assets/img/lg-pallets-carregamento-480.webp 480w, assets/img/lg-pallets-carregamento-960.webp 960w, assets/img/lg-pallets-carregamento-1200.webp 1200w" sizes="(max-width: 760px) 92vw, 420px" width="960" height="720" alt="" loading="lazy" decoding="async" /><span class="pf-tag">Urgente</span></div>
               <div class="pf-body"><h3>Expresso no mesmo dia</h3><p>Pediu em horário comercial, o veículo sai no mesmo dia.</p></div>
             </article>
         </div>
@@ -226,7 +226,7 @@
         <div class="container people-grid">
           <figure class="people-visual" data-observe>
             <span class="slab s1" aria-hidden="true"></span><span class="slab s2" aria-hidden="true"></span>
-            <img src="assets/img/ai-motorista.jpg" alt="Motorista ao lado do caminhão" loading="lazy" decoding="async" />
+            <img src="assets/img/ai-motorista-960.webp" srcset="assets/img/ai-motorista-480.webp 480w, assets/img/ai-motorista-960.webp 960w, assets/img/ai-motorista-1024.webp 1024w" sizes="(max-width: 760px) 92vw, 420px" width="960" height="536" alt="Motorista ao lado do caminhão" loading="lazy" decoding="async" />
           </figure>
           <article class="people-copy" data-observe>
             <h2 class="h-red">Seja um agregado</h2>
@@ -254,7 +254,7 @@
     <footer class="site-footer">
       <div class="container footer-inner">
         <address>
-          <img src="assets/img/logo-lgvans-branco.png" alt="Grupo LGvans do Brasil" width="600" height="266" class="footer-logo" loading="lazy" />
+          <img src="assets/img/logo-lgvans-branco-300.webp" srcset="assets/img/logo-lgvans-branco-300.webp 300w, assets/img/logo-lgvans-branco-600.webp 600w" sizes="150px" srcset="assets/img/logo-lgvans-branco-300.webp 300w, assets/img/logo-lgvans-branco-600.webp 600w" sizes="150px" srcset="assets/img/logo-lgvans-branco-300.webp 300w, assets/img/logo-lgvans-branco-600.webp 600w" sizes="150px" srcset="assets/img/logo-lgvans-branco-300.webp 300w, assets/img/logo-lgvans-branco-600.webp 600w" sizes="150px" alt="Grupo LGvans do Brasil" width="300" height="133" class="footer-logo" loading="lazy" />
           <p><strong>LG Locação Transporte e Logística Ltda.</strong></p>
           <p data-cfg="cnpj"></p>
         </address>
@@ -286,6 +286,6 @@
       </svg>
     </a>
 
-    <script src="assets/js/main.js" type="module"></script>
+    <script src="assets/js/site.min.js" defer></script>
   </body>
 </html>
